@@ -1,0 +1,25 @@
+title: 'Testimonial Quote Section'
+fields:
+  -
+    handle: collections
+    field:
+      mode: select
+      type: collections
+      display: Collections
+      max_items: 1
+  -
+    handle: paginate
+    field:
+      type: text
+      display: Paginate
+  -
+    handle: limit
+    field:
+      type: integer
+      display: Limit
+  -
+    handle: background_image
+    field:
+      container: assets
+      type: assets
+      display: 'Background Image'

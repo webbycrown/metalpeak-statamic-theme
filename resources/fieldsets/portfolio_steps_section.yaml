@@ -1,0 +1,51 @@
+title: 'Portfolio Steps Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: tab_items
+    field:
+      type: replicator
+      display: 'Tab Items'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: tab_button_title
+                  field:
+                    type: text
+                    display: 'Tab Button Title'
+                -
+                  handle: content_title
+                  field:
+                    type: text
+                    display: 'Content Title'
+                -
+                  handle: content_description
+                  field:
+                    type: textarea
+                    display: 'Content Description'
+                -
+                  handle: button_text
+                  field:
+                    type: text
+                    display: 'Button Text'
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: 'Button URL'
+                -
+                  handle: tab_image
+                  field:
+                    min_files: 1
+                    container: assets
+                    type: assets
+                    display: 'Tab Image'

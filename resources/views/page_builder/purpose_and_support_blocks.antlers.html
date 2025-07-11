@@ -1,0 +1,67 @@
+{{ if segment_1 == "service-detail-two"  }}  
+
+<section class="services-detail-one section services-detail-features">
+                    <div class="container">
+                        <div class="wc-row">
+                            <div class="wc-column-12">
+                               
+                                <!-- purpose-content -->
+                                <div class="purpose-content">
+                                    {{ purpose_block }}
+                                        {{ if type == 'text' }}
+                                            {{ text }}
+                                        {{ /if }}
+
+                                        {{ if type == 'features' }}
+                                        <div class="purpose-wrapper" data-aos="fade-up">
+                                            <div class="purpose-inner">
+                                                <div class="purpose-inner-icon">
+                                                    {{ icon_svg }}  {{ if icon_svg ends_with '.svg' }} {{ svg src="{icon_svg}" }} {{ /if }} {{ /icon_svg }}
+                                                </div>
+                                                <div class="purpose-inner-text">
+                                                    <h5>{{ feature_title }}</h5>
+                                                    <p>{{ feature_description }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {{ /if }}
+
+                                    {{ /purpose_block }}
+                                   
+                                
+                                    
+                                    <div class="Support-wrapper">
+                                    	{{ support_features }}
+                                        <div class="support-icon-content background-secondary" data-aos="fade-right">
+                                            <div class="services-icon">
+                                            	{{ if icon }}
+                                            	{{ icon }}
+                                            	{{ if extension == "svg" }}
+                                            	{{ svg src="{url}" }}
+                                            	{{ /if }}
+                                            	{{ /icon }}
+                                            	{{ /if }}
+                                        </div>
+                                        <h4>{{ title }}</h4>
+                                        <p>{{ description }}</p>
+                                    </div>
+                                    {{ /support_features }}
+                                    <div class="support-para" data-aos="fade-left">
+                                       {{ extra_support_paragraphs }}
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- services-detail-one-image-grid -->
+                            <div class="services-detail-one-image-grid" data-aos="fade-up">
+                            	{{ image_gallery }}
+                                <div class="image mw-img-cover">
+                                    <img src="{{ url }}" alt="" class="img">
+                                </div>
+                            	{{ /image_gallery }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>	
+
+{{/if}}

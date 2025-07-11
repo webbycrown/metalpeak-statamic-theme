@@ -1,0 +1,29 @@
+title: 'About Count Section'
+fields:
+  -
+    handle: items
+    field:
+      type: replicator
+      display: 'List of count items'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            items_count:
+              display: items_count
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: item_count
+                  field:
+                    type: integer
+                    display: Count
+                -
+                  handle: suffix
+                  field:
+                    type: text
+                    display: Suffix

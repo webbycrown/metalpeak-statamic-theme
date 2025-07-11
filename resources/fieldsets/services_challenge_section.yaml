@@ -1,0 +1,60 @@
+title: 'Services Challenge Section'
+fields:
+  -
+    handle: description
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: Description
+  -
+    handle: images
+    field:
+      min_files: 1
+      container: assets
+      type: assets
+      display: Images
+  -
+    handle: working_description
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: 'Working Description'
+      sets:
+        working_list:
+          display: 'Working List'
+          sets:
+            working_list:
+              display: 'Working List'
+              fields:
+                -
+                  handle: working_list
+                  field:
+                    type: grid
+                    display: 'Working List'
+                    fields:
+                      -
+                        handle: point
+                        field:
+                          type: text
+                          display: Point
+  -
+    handle: button
+    field:
+      type: grid
+      display: Button
+      fields:
+        -
+          handle: button_text
+          field:
+            type: text
+            display: 'Button Text'
+        -
+          handle: button_link
+          field:
+            type: text
+            display: 'Button Link'
+  -
+    handle: footer_description
+    field:
+      type: textarea
+      display: 'Footer Description'

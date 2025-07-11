@@ -1,0 +1,127 @@
+<!-- start-banner -->
+{{ setting }}
+{{ if inner_banner_image }}
+{{ inner_banner_image }}
+<section class="banner section" style="background-image: url('{{ url }}');">
+    {{ /inner_banner_image }}
+    {{ else }}
+    <section class="banner section" style="background-image: url('/images/about-banner.jpg');">
+        {{ /if }}
+        {{ /setting }}
+        <div class="container">
+            <div class="wc-row">
+                <div class="wc-column-12">
+                    <div class="banner-wrapper" data-aos="fade-down">
+                        <h1>Category</h1>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="javascript:;" class="active">Category</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- end-banner -->
+
+{{ if segment_1 == "service" }}
+<!-- start-services-two -->
+<section class="services-two section services-page-one">
+    <div class="container">
+        <!-- services-wrap -->
+        
+
+        {{ collection:services as="services"  category:contains="{ category_slug }" paginate="true" limit="3" }}
+
+        
+        <div class="wc-row services-two-wrapper grid_append">
+            {{ services }}
+            <a href="/service/{{slug}}" class="grid-item-append" data-aos="fade-down">
+                <div class="services-two-content background-secondary">
+                    <div class="services-icon">
+                        {{ image }} {{ if image ends_with '.svg' }} {{ svg src="{image}" }} {{ /if }}{{ /image }}
+                    </div>
+                    <h4>{{ title }}</h4>
+                    <p>{{ short_description }}</p>
+                </div>
+            </a>
+
+            {{ /services }}
+        </div>
+
+        {{ paginate }}
+        <!-- our services grid loader -->
+        <input type="hidden" class="lastPage" value="{{ total_pages }}">
+        <input type="hidden" class="currentPage" value="{{ current_page }}">
+        {{ if next_page }} 
+        <div class="load-more-wrap">
+            <div class="load-btn" style="text-align: center;">
+                <a href="{{ next_page }}" class="btn btn-primary ajax-load-more-grid">Load More <img src="{{theme:asset}}assets/images/loader.svg" alt="loader" class="object-cover hidden"></a>
+            </div>
+        </div>
+        {{ /if }}
+        {{ /paginate }}
+        {{ /collection:services }}
+        
+    </div>
+    
+</section>
+<!-- end-services-two -->
+{{ /if }}
+
+
+
+{{ if segment_1 == "blog" }}
+<!-- start-services-two -->
+<section class="blog section blog-grid">
+    <div class="container">
+        <!-- services-wrap -->
+        
+
+        {{ collection:blogs as="blogs"  category:contains="{ category_slug }" paginate="true" limit="3" }}
+
+        
+        <div class="blog-wrapper grid_append" data-aos="fade-left">
+            {{ blogs }}
+            <div class="blog-content grid-item-append">
+                <div class="blog-image">
+                    <a href="/blog/{{slug}}">
+                        {{ thumb_image }}<img src="{{ url }}" alt="" class="object-cover">{{ /thumb_image }}
+                    </a>
+                    <div class="blog-date">
+                        <p>{{ updated_at format="M j, Y" }}</p>
+                    </div>
+                </div>
+                <a href="/blog/{{slug}}">
+                    <h4>{{ title }}</h4>
+                </a>
+                <p>{{ short_description }}</p>
+                {{ if read_more_button_text }}
+                <div class="blog-read-btn">
+                    <a href="{{ read_more_button_url }}/{{slug}}" class="btn btn-primary">{{ read_more_button_text }}</a>
+                </div>
+                {{ /if }}
+            </div>
+
+            {{ /blogs }}
+        </div>
+
+        {{ paginate }}
+        <!-- our services grid loader -->
+        <input type="hidden" class="lastPage" value="{{ total_pages }}">
+        <input type="hidden" class="currentPage" value="{{ current_page }}">
+        {{ if next_page }} 
+        <div class="load-more-wrap">
+            <div class="load-btn" style="text-align: center;">
+                <a href="{{ next_page }}" class="btn btn-primary ajax-load-more-grid">Load More <img src="{{theme:asset}}assets/images/loader.svg" alt="loader" class="object-cover hidden"></a>
+            </div>
+        </div>
+        {{ /if }}
+        {{ /paginate }}
+        {{ /collection:blogs }}
+        
+    </div>
+    
+</section>
+<!-- end-services-two -->
+{{ /if }}

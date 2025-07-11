@@ -1,0 +1,87 @@
+title: 'Purpose and Support Blocks'
+fields:
+  -
+    handle: purpose_block
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: 'Purpose Block'
+      sets:
+        features:
+          display: Features
+          sets:
+            features:
+              display: Features
+              fields:
+                -
+                  handle: icon_svg
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    type: assets
+                    display: 'Icon SVG'
+                -
+                  handle: feature_title
+                  field:
+                    type: text
+                    display: 'Feature Title'
+                -
+                  handle: feature_description
+                  field:
+                    type: textarea
+                    display: 'Feature Description'
+  -
+    handle: support_features
+    field:
+      type: grid
+      display: 'Support Features'
+      fields:
+        -
+          handle: icon
+          field:
+            container: assets
+            type: assets
+            display: Icon
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: description
+          field:
+            type: textarea
+            display: Description
+  -
+    handle: extra_support_paragraphs
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: 'Extra Support Paragraphs'
+  -
+    handle: image_gallery
+    field:
+      min_files: 1
+      container: assets
+      type: assets
+      display: 'Image Gallery'
+  -
+    handle: section_type
+    field:
+      options:
+        -
+          key: detail_page_1
+          value: 'Detail page one'
+        -
+          key: detail_page_2
+          value: 'Detail page two'
+        -
+          key: detail_page_3
+          value: 'Detail page three'
+        -
+          key: detail_page_4
+          value: 'Detail page four'
+      default: detail_page_1
+      type: select
+      display: 'Section Type'

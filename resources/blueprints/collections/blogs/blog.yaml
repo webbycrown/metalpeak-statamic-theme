@@ -1,0 +1,198 @@
+title: Blog
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: team_member
+            field:
+              max_items: 1
+              mode: select
+              collections:
+                - teams
+              type: entries
+              display: 'Team Member'
+          -
+            handle: thumb_image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Thumb Image'
+          -
+            handle: featured_image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Featured Image'
+          -
+            handle: short_description
+            field:
+              type: textarea
+              display: 'Short Description'
+          -
+            handle: quote_image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Quote Image'
+          -
+            handle: description
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Description
+              sets:
+                quotes_inner:
+                  display: 'Quotes Inner'
+                  sets:
+                    quotes_inner:
+                      display: 'Quotes Inner'
+                      fields:
+                        -
+                          handle: quotes
+                          field:
+                            type: text
+                            display: Quotes
+                    images:
+                      display: Images
+                      fields:
+                        -
+                          handle: images
+                          field:
+                            max_files: 3
+                            min_files: 1
+                            container: assets
+                            type: assets
+                            display: Images
+          -
+            handle: category
+            field:
+              mode: select
+              taxonomies:
+                - blog_categories
+              type: terms
+              display: Category
+          -
+            handle: tag
+            field:
+              mode: select
+              taxonomies:
+                - blog_tags
+              type: terms
+              display: Tag
+          -
+            handle: socials
+            field:
+              type: grid
+              display: Socials
+              fields:
+                -
+                  handle: platform
+                  field:
+                    options:
+                      -
+                        key: facebook-f
+                        value: Facebook
+                      -
+                        key: youtube
+                        value: Youtube
+                      -
+                        key: twitter
+                        value: Twitter
+                      -
+                        key: instagram
+                        value: Instagram
+                      -
+                        key: linkedin-in
+                        value: Linkedin
+                      -
+                        key: github
+                        value: Github
+                      -
+                        key: whatsapp
+                        value: Whatsapp
+                      -
+                        key: pinterest-p
+                        value: Pinterest
+                      -
+                        key: telegram-plane
+                        value: Telegram
+                      -
+                        key: reddit-alien
+                        value: 'Reddit Alien'
+                    type: select
+                    display: Platform
+                    listable: true
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Url
+          -
+            handle: related_blog_text
+            field:
+              type: text
+              display: 'Related blog text'
+          -
+            handle: related_blog
+            field:
+              mode: select
+              collections:
+                - blogs
+              type: entries
+              display: 'Related Blog'
+          -
+            handle: hyper_link
+            field:
+              type: grid
+              display: 'Hyper link'
+              fields:
+                -
+                  handle: hyper_url
+                  field:
+                    default: 'javascript:;'
+                    type: text
+                    display: 'Hyper url'
+                -
+                  handle: icon
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    restrict: true
+                    type: assets
+                    display: Icon
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+  seo_section:
+    display: 'Seo Section'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: seo_section

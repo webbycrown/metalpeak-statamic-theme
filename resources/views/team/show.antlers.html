@@ -1,0 +1,62 @@
+{{ if get:slug }}
+
+{{ collection:teams }}
+
+{{ if slug == get:slug }}
+{{ partial:team-detail slug="{get:slug}" }}
+{{ /if }}
+
+{{ /collection:teams }}
+
+{{ else }}
+
+ 
+{{ partial:team-detail slug="{segment_2}" }}
+
+
+{{ /if }}
+
+
+{{ if segment_2=='{slug}' }}
+<!-- start-team-popup -->
+<div class="team-popups mfp-hide white-popup-block teams_html" id="test-form">
+    <div class="team-info">
+        <!-- team-member-image -->
+        <div class="team-info-image">
+            {{ image }}<img src="{{ url }}" alt="{{title}}">{{ /image }}
+        </div>
+        <!-- membar-info -->
+        <div class="team-info-content">
+            <h3>{{ title }}</h3>
+            <p>{{ position }}</p>
+            <p>{{ bio }}</p>
+            <div class="team-personal-info">
+                <ul>
+                    <li><a href="mailto:{{ emails }}{{ if index == 0 }}{{ email }}{{/if}}{{ emails }}">
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        {{ emails }}
+                        <p>{{ email }}</p>
+                        {{ /emails }}
+                    </a></li>
+                    <li>
+                        <a href="tel:{{ phone_numbers }}{{ if index == 0 }}{{ number }}{{ /if }}{{ /phone_numbers }}">
+                            <span><i class="fa-solid fa-phone"></i></span>
+                            <div class="team-personal-info-nub">
+                                {{ phone_numbers }}
+                                <p>{{ number }}</p>
+                                {{ /phone_numbers }}
+                            </div>
+                        </a>
+                    </li>
+                    <li><a href="{{ address_link }}">
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <p>{{ address }}</p>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end-team-popup -->
+
+{{ /if }}

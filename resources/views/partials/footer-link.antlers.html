@@ -1,0 +1,69 @@
+<!-- jquery -->
+<script src="{{ theme:asset src='assets/js/jquery.min.js' }}?v={{ now format="YmdHis" }}"></script>
+
+<!-- font-awesome -->
+<script src="{{ theme:asset src='assets/js/all.min.js' }}?v={{ now format="YmdHis" }}"></script>
+
+<!-- swiper js -->
+<script src="{{ theme:asset src='assets/js/swiper-bundle.min.js' }}?v={{ now format="YmdHis" }}"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<!-- magnific js -->
+<script src="{{ theme:asset src='assets/js/jquery.magnific-popup.min.js' }}?v={{ now format="YmdHis" }}"></script>
+
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+<!-- masonary-image -->
+<script src="{{ theme:asset src='assets/js/masonry-docs.min.js' }}?v={{ now format="YmdHis" }}"></script>
+
+<!-- aos-animation -->
+<script src="{{ theme:asset src='assets/js/unpkg.com_aos@2.3.1_dist_aos.js' }}?v={{ now format="YmdHis" }}"></script>
+
+<!-- custom js -->
+<script src="{{ theme:asset src='assets/js/custom.js' }}?v={{ now format="YmdHis" }}"></script>
+
+
+<!-- counter -->
+
+<script type="text/javascript">
+    const newsLetterUrl = "{{ route:newsLetter }}";
+    const blogSearchUrl = "{{ route:blog.search }}";
+    const blogPageRedirect = "/blog";
+    const currentPage = '{{ segment_1 }}';
+    const blogClassicPageRedirect = '/blog-classic';
+    const headerSearch = "{{ route:header.search }}";
+
+   var counted = 0;
+
+$(window).scroll(function () {
+    var $counter = $('#counter');
+
+    if ($counter.length) {
+        var oTop = $counter.offset().top - window.innerHeight;
+
+        if (counted === 0 && $(window).scrollTop() > oTop) {
+            $('.count').each(function () {
+                var $this = $(this);
+                var countTo = $this.attr('data-count');
+
+                $({ countNum: $this.text() }).animate(
+                    {
+                        countNum: countTo,
+                    },
+                    {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                        },
+                    }
+                );
+            });
+
+            counted = 1;
+        }
+    }
+});
+</script>

@@ -1,0 +1,88 @@
+title: Footer
+data:
+  address: '45,E Victore Storetina , Ofroad Ezzipt, South-aftrica'
+  address_line: 'https://maps.app.goo.gl/6zEh7VnuCFANTdbb9'
+  phone_number:
+    -
+      id: mclo4xw6
+      number: '+9195 445 6272'
+    -
+      id: mclsy1z1
+      number: '+9195 445 6272'
+  email_address:
+    -
+      id: mclo4o5z
+      email: creative@gmail.com
+  our_links:
+    -
+      id: mclo34qa
+      label: Home
+      url: /
+    -
+      id: mclo3bnm
+      label: About
+      url: /about
+    -
+      id: mclo3msx
+      label: Services
+      url: /service
+    -
+      id: mclo3w9s
+      label: 'Our Blog'
+      url: /blog
+    -
+      id: mclo43q8
+      label: Contact
+      url: /contact
+  support:
+    -
+      id: mclo1jlr
+      label: Pricing
+      url: /pricing
+    -
+      id: mclo1wum
+      label: Portfolio
+      url: /portfolio
+    -
+      id: mclo2cpg
+      label: 'Our Team'
+      url: /team
+    -
+      id: mclo2mxn
+      label: Career
+      url: /career
+    -
+      id: mclo2uaj
+      label: FAQ
+      url: /faq
+  description: 'Metalpeak is a leading provider of metal solutions, delivering quality, performance, and reliability to industries worldwide.'
+  copyright: '© Copyright 2022 <a href="/">MetalPeak</a>. All Rights Reserved'
+  socials:
+    -
+      id: mclocmzc
+      url: 'https://www.facebook.com/'
+      icon: facebook-f
+    -
+      id: mclocx9r
+      url: 'https://www.twitter.com/'
+      icon: twitter
+    -
+      id: mclod1tz
+      url: 'https://www.youtube.com/'
+      icon: youtube
+    -
+      id: mclod7qv
+      url: 'https://www.linkedin.com/'
+      icon: linkedin-in
+    -
+      id: mclodnsf
+      url: 'https://www.instagram.com/'
+      icon: telegram-plane
+  subscribe_title: 'Subscribe our Newslatter'
+  photo_gallery:
+    - images/footer-two1.png
+    - images/footer-two2.png
+    - images/footer-two3.png
+    - images/footer-two4.png
+    - images/footer-two5.png
+    - images/footer-two6.png

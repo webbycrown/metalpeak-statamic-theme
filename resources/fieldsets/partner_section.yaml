@@ -1,0 +1,14 @@
+title: 'Partner Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: partner_logos
+    field:
+      min_files: 1
+      container: assets
+      type: assets
+      display: 'Partner Logos'

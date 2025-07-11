@@ -1,0 +1,219 @@
+title: Service
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: short_description
+            field:
+              type: textarea
+              display: 'Short Description'
+          -
+            handle: image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: Image
+          -
+            handle: featured_image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Featured Image'
+          -
+            handle: category
+            field:
+              mode: select
+              taxonomies:
+                - service_categories
+              type: terms
+              display: Category
+          -
+            handle: tag
+            field:
+              mode: select
+              taxonomies:
+                - service_tags
+              type: terms
+              display: Tag
+              sortable: false
+          -
+            handle: description
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Description
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - h1
+                - h4
+                - h5
+                - h6
+                - underline
+                - strikethrough
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              sets:
+                images:
+                  display: Images
+                  sets:
+                    images:
+                      display: Images
+                      fields:
+                        -
+                          handle: images
+                          field:
+                            container: assets
+                            type: assets
+                            display: Images
+          -
+            handle: socials
+            field:
+              type: grid
+              display: Socials
+              fields:
+                -
+                  handle: platform
+                  field:
+                    options:
+                      -
+                        key: facebook-f
+                        value: Facebook
+                      -
+                        key: youtube
+                        value: Youtube
+                      -
+                        key: twitter
+                        value: Twitter
+                      -
+                        key: instagram
+                        value: Instagram
+                      -
+                        key: linkedin-in
+                        value: Linkedin
+                      -
+                        key: github
+                        value: Github
+                      -
+                        key: whatsapp
+                        value: Whatsapp
+                      -
+                        key: pinterest-p
+                        value: Pinterest
+                      -
+                        key: telegram-plane
+                        value: Telegram
+                      -
+                        key: reddit-alien
+                        value: 'Reddit Alien'
+                    type: select
+                    display: Platform
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Url
+          -
+            handle: related_services
+            field:
+              mode: select
+              collections:
+                - services
+              type: entries
+              display: 'Related Services'
+          -
+            handle: brochure_title
+            field:
+              type: text
+              display: 'Brochure Title'
+          -
+            handle: brochure_description
+            field:
+              type: textarea
+              display: 'Brochure Description'
+          -
+            handle: button_text
+            field:
+              default: 'Download Now'
+              type: text
+              display: 'Button Text'
+          -
+            handle: pdf_file
+            field:
+              default: images/dummy.pdf
+              type: text
+              display: 'PDF File'
+          -
+            handle: hyper_link
+            field:
+              type: grid
+              display: 'Hyper link'
+              listable: true
+              fields:
+                -
+                  handle: url
+                  field:
+                    default: 'javascript:;'
+                    type: text
+                    display: url
+                -
+                  handle: icon
+                  field:
+                    container: assets
+                    type: assets
+                    display: Icon
+                    listable: true
+                    max_files: 1
+                    min_files: 1
+          -
+            import: all_page_builder
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+  seo_section:
+    display: 'Seo Section'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: seo_section

@@ -1,0 +1,192 @@
+title: Team
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: position
+            field:
+              type: text
+              display: Position
+          -
+            handle: image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: Image
+          -
+            handle: address
+            field:
+              type: textarea
+              display: Address
+          -
+            handle: address_link
+            field:
+              type: text
+              display: 'Address Link'
+          -
+            handle: phone_numbers
+            field:
+              type: grid
+              display: 'Phone Numbers'
+              fields:
+                -
+                  handle: number
+                  field:
+                    type: text
+                    display: Number
+          -
+            handle: emails
+            field:
+              type: grid
+              display: Emails
+              fields:
+                -
+                  handle: email
+                  field:
+                    type: text
+                    display: Email
+          -
+            handle: bio
+            field:
+              type: textarea
+              display: Bio
+          -
+            handle: intro
+            field:
+              type: textarea
+              display: 'Short Intro'
+          -
+            handle: interests
+            field:
+              type: array
+              display: Interests
+          -
+            handle: education
+            field:
+              type: grid
+              display: Education
+              fields:
+                -
+                  handle: degree
+                  field:
+                    type: text
+                    display: Degree
+                -
+                  handle: university
+                  field:
+                    type: text
+                    display: University
+          -
+            handle: skill_image
+            field:
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Skill Image'
+          -
+            handle: long_description
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: 'Full Bio'
+              sets:
+                skill_levels:
+                  display: 'Skill Levels'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: skill_levels
+                          field:
+                            type: grid
+                            display: 'Skill Levels'
+                            fields:
+                              -
+                                handle: skill
+                                field:
+                                  type: text
+                                  display: 'Skill Name'
+                              -
+                                handle: percentage
+                                field:
+                                  type: integer
+                                  display: Percentage
+          -
+            handle: socials
+            field:
+              type: grid
+              display: Socials
+              fields:
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Url
+                -
+                  handle: icon
+                  field:
+                    options:
+                      -
+                        key: facebook-f
+                        value: Facebook
+                      -
+                        key: youtube
+                        value: Youtube
+                      -
+                        key: twitter
+                        value: Twitter
+                      -
+                        key: instagram
+                        value: Instagram
+                      -
+                        key: linkedin-in
+                        value: Linkedin
+                      -
+                        key: github
+                        value: Github
+                      -
+                        key: whatsapp
+                        value: Whatsapp
+                      -
+                        key: pinterest-p
+                        value: Pinterest
+                      -
+                        key: telegram-plane
+                        value: Telegram
+                      -
+                        key: reddit-alien
+                        value: 'Reddit Alien'
+                    type: select
+                    display: Icon
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+  seo_section:
+    display: 'Seo Section'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: seo_section

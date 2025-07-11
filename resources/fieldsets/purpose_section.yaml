@@ -1,0 +1,27 @@
+title: 'Purpose Section'
+fields:
+  -
+    handle: purpose_description
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: 'Purpose Description'
+  -
+    handle: section_type
+    field:
+      options:
+        -
+          key: detail_page_1
+          value: 'Detail page one'
+        -
+          key: detail_page_2
+          value: 'Detail page two'
+        -
+          key: detail_page_3
+          value: 'Detail page three'
+        -
+          key: detail_page_4
+          value: 'Detail page four'
+      default: detail_page_1
+      type: select
+      display: 'Section Type'

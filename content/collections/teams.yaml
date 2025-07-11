@@ -1,0 +1,7 @@
+title: Teams
+template: team/show
+revisions: false
+route: '/team/{slug}'
+date_behavior:
+  past: public
+  future: private

@@ -1,0 +1,19 @@
+name: metalpeak
+title: MetalPeak Theme
+description: A custom Statamic Starter Kit for MetalPeak.
+version: 1.0
+export_paths:
+  - routes
+  - content
+  - app/Http
+  - resources/blueprints
+  - resources/forms
+  - resources/fieldsets
+  - resources/users
+  - resources/views
+  - public/assets
+  - public/build
+  - storage/forms
+  - package.json
+  - vite.config.js
+  - README.md

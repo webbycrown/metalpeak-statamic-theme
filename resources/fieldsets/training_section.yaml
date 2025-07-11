@@ -1,0 +1,76 @@
+title: 'Training Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: description
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: Description
+      sets:
+        training_list:
+          display: 'Training List'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: lists
+                  field:
+                    type: grid
+                    display: Lists
+                    fields:
+                      -
+                        handle: list
+                        field:
+                          type: text
+                          display: List
+  -
+    handle: training_images
+    field:
+      min_files: 1
+      container: assets
+      type: assets
+      display: 'Training Images'
+  -
+    handle: stat_boxes
+    field:
+      type: replicator
+      display: 'Stat Boxes'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: icon
+                  field:
+                    container: assets
+                    type: assets
+                    display: Icon
+                -
+                  handle: training_count
+                  field:
+                    type: integer
+                    display: 'Training Count'
+                -
+                  handle: training_label
+                  field:
+                    type: text
+                    display: 'Training Label'
+  -
+    handle: button_text
+    field:
+      type: text
+      display: 'Button Text'
+  -
+    handle: button_url
+    field:
+      type: text
+      display: 'Button URL'

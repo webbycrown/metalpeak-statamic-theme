@@ -1,0 +1,7 @@
+title: Portfolio
+template: portfolio/show
+route: '/portfolio/{slug}'
+revisions: false
+date_behavior:
+  past: public
+  future: private

@@ -1,0 +1,48 @@
+ {{ if segment_1 == "career"}}
+  <!-- start-Success-section -->
+            <section class="success">
+                <div class="container">
+                    <div class="success-title" data-aos="fade-left">
+                        <h2>{{ section_title }}</h2>
+                    </div>
+                    <div class="success-wrapper" data-aos="fade-right">
+                        {{ success_columns }}
+                        <div class="success-content">
+                            <div class="success-count">
+                                <h4>{{ step_number }}</h4>
+                            </div>
+                            <h4>{{ step_title }}</h4>
+                            <p>{{ description }}</p>
+                        </div>
+                        {{ /success_columns }}
+                    </div>
+                </div>
+            </section>
+            <!-- end-Success-section -->
+
+{{ /if }}
+
+ {{ if segment_1 == "service-detail-three"}}
+ {{ if section_type == 'detail_page_3' }} 
+
+        <section class="services-intructions section">
+                <div class="container">
+                    <div class="wc-row" data-aos="fade-left">
+                        <!-- intruction-grid -->
+                        {{ success_columns }}
+                        <div class="wc-column-4">
+                            <div class="intructions-nub">
+                                <span>{{ step_number }}</span>
+                                <h4>{{ step_title }}</h4>
+                                <p>{{ description }}</p>
+                            </div>
+                        </div>
+                        {{ /success_columns }}
+                       
+                    </div>
+                </div>
+            </section>
+
+
+{{ /if }}
+{{ /if }}

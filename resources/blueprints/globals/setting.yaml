@@ -1,0 +1,76 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: favicon
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: Favicon
+              validate:
+                - required
+          -
+            handle: logo
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: Logo
+              validate:
+                - required
+          -
+            handle: logo_white
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Logo White'
+          -
+            handle: inner_banner_image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Inner Banner Image'
+              validate:
+                - required
+          -
+            handle: footer
+            field:
+              options:
+                -
+                  key: footer-one
+                  value: 'Footer One'
+                -
+                  key: footer-two
+                  value: 'Footer Two'
+                -
+                  key: footer-three
+                  value: 'Footer Three'
+              default: 'Footer One'
+              type: select
+              display: Footer
+          -
+            handle: header
+            field:
+              options:
+                -
+                  key: header-one
+                  value: 'Header One'
+                -
+                  key: header-two
+                  value: 'Header Two'
+                -
+                  key: header-three
+                  value: 'Header Three'
+              default: 'Header Three'
+              type: select
+              display: Header

@@ -1,0 +1,206 @@
+{{ if segment_1 == "blog"  }}
+
+<!-- start-blog-grid-section -->
+				<section class="blog section blog-grid blog-page-one">
+					<div class="container">
+						<div class="wc-row blog-head-wrapper">
+							<div class="wc-column-12">
+								<!-- title -->
+								<div class="blog-head-title" data-aos="fade-right">
+									<h2 class="mw-sub-title">{{ section_title }}</h2>
+									<p>{{ section_description }}</p>
+								</div>
+							</div>
+						</div>
+						<div class="blog-wrapper" data-aos="fade-left">
+							<!-- blog-content -->
+							{{ if collections == "blogs" }}
+
+							{{ collection:blogs as="blogs" title:contains="{ get:s }" slug:contains="{ get:s }" tag:contains="{ get:tag }" paginate={paginate} limit="{limit}" }}
+
+							{{ /if }}	
+
+							{{ if blogs }}
+
+							<div class="grid_append blog_search_div">
+								{{ blogs }}	
+								<div class="blog-content grid-item-append">
+									<div class="blog-image">
+										<a href="/blog/{{slug}}">
+											{{ thumb_image }}<img src="{{ url }}" alt="">{{ /thumb_image }}
+										</a>
+										<div class="blog-date">
+											<p>{{ updated_at format="M j, Y" }}</p>
+										</div>
+									</div>
+									<a href="/blog/{{slug}}">
+										<h4>{{ title }}</h4>
+									</a>
+									<p>{{ short_description }}</p>
+									{{ if read_more_button_text }}
+									<div class="blog-read-btn">
+										<a href="{{ read_more_button_url }}/{{slug}}" class="btn btn-primary">{{ read_more_button_text }}</a>
+									</div>
+									{{ /if }}
+								</div>
+								{{ /blogs }}
+							</div>
+							<!-- pagination-part -->
+							{{ paginate }}  
+								{{ partial:pagination }}
+							{{ /paginate }}  
+
+							{{ else }}
+								<p class="text-center py-4">No blogs found for your search.</p>
+							{{ /if }}
+
+							{{ if collections == "blogs" }}
+							{{ /collection:blogs }}
+							{{ /if }}
+
+						</div>
+					</div>
+				</section>
+				<!-- end-blog-grid-section -->
+				{{ /if }}
+
+
+				{{ if segment_1 == "blog-list"  }}
+
+				<section class="blog section blog-two blog-list">
+					<div class="container">
+						<div class="wc-row blog-head-wrapper">
+							<div class="wc-column-12">
+								<!-- title -->
+								<div class="blog-head-title" data-aos="fade-right">
+									<h2 class="mw-sub-title">{{section_title}}</h2>
+									<p>{{section_description}}</p>
+								</div>
+							</div>
+						</div>
+						<!-- blog-grid -->
+						{{ if collections == "blogs" }}
+
+						{{  collection:blogs as="blogs" paginate={paginate} limit="{limit}" }}
+
+						{{ /if }}
+
+						{{ if blogs }}
+						<div class="blog-two-wrapper grid_append" data-aos="fade-left">
+							{{ blogs }}	
+							<div class="blog-right-inner grid-item-append">
+								<div class="blog-content-image">
+									<a href="/blog/{{slug}}">
+										{{ thumb_image }}<img src="{{ url }}" alt="">{{ /thumb_image }}
+									</a>
+									<div class="blog-date">
+										<p>{{ updated_at format="M j, Y" }}</p>
+									</div>
+								</div>
+								<div class="blog-two-text">
+									<a href="/blog/{{slug}}">
+										<h4>{{title}}</h4>
+									</a>
+									<p>{{short_description}}</p>
+									{{ if read_more_button_text }}
+									<div class="blog-two-btn">
+										<a href="{{read_more_button_url}}/{{slug}}" class="btn btn-primary">{{read_more_button_text}}</a>
+									</div>
+									{{ /if }}
+								</div>
+							</div>
+							{{ /blogs }}	
+						</div>
+						<!-- pagination-part -->
+						{{ paginate }}  
+							{{ partial:pagination }}
+						{{ /paginate }}  
+
+						{{ else }}
+							<p class="text-center py-4">No blogs found for your search.</p>
+						{{ /if }}
+
+						{{ if collections == "blogs" }}
+						{{ /collection:blogs }}
+						{{ /if }}
+					</div>
+				</section>
+
+				{{ /if }}
+
+
+				{{ if segment_1 == "blog-classic"  }}
+				  <!-- start-blog-classic-section -->
+                <section class="blog blog-two section blog-classic">
+                    <div class="container">
+                        <div class="wc-row blog-head-wrapper">
+                            <div class="wc-column-12">
+                                <!-- title -->
+                                <div class="blog-head-title" data-aos="fade-right">
+                                    <h2 class="mw-sub-title">{{ section_title }}</h2>
+                                    <p>{{ section_description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- blog-classic-wrapper -->
+                        <div class="blog-classic-wrapper">
+                            <!-- blog-classic-left -->
+                            {{ if collections == "blogs" }}
+                            	{{  collection:blogs as="blogs" title:contains="{ get:s }" slug:contains="{ get:s }" tag:contains="{ get:tag }" paginate={paginate} limit="{limit}" }}
+                            {{ /if }}   
+
+                            <div class="blog-two-wrapper blog-classic-left grid_append blog_search_div" data-aos="fade-up">
+                            {{ if blogs }}
+	                            {{ blogs }} 
+	                            <div class="blog-content">
+	                            	<!-- image -->
+	                            	<div class="blog-content-image">
+	                            		{{ thumb_image }}<img src="{{ url }}" alt="">{{ /thumb_image }}
+	                            		<div class="blog-date">
+	                            			<p>{{ updated_at format="M j, Y" }}</p>
+	                            		</div>
+	                            	</div>
+	                            	<h4>{{title}}</h4>
+	                            	<p>{{short_description}}</p>
+	                            	<!-- btn -->
+	                            	{{ if read_more_button_text }}
+	                            	<div class="blog-two-btn">
+	                            		<a href="{{read_more_button_url}}/{{slug}}" class="btn btn-primary">{{read_more_button_text}}</a>
+	                            	</div>
+	                            	{{ /if }}
+	                            	<div class="classic-blog-bottom">
+	                            		{{ team_member }}
+	                            		<div class="classic-blog-bottom-left">
+	                            			{{ image }} <img src="{{ url }}" alt=""> {{ /image }}
+	                            			<p class="name">{{ title }}</p>
+	                            			<ul class="date">
+	                            				<li>{{ updated_at format="j F, Y" }}</li>
+	                            			</ul>
+	                            		</div>
+	                            		{{ /team_member }}
+	                            	</div>
+	                            </div>
+	                            {{ /blogs }} 
+                            {{ else }}
+                            	<p class="text-center py-4">No blogs found for your search.</p>
+                            {{ /if }}
+                            </div>
+                            <!-- blog-classic-right -->
+                            {{ partial:blog-header }}
+                        </div>
+                        <!-- pagination-part -->
+                        {{ if blogs }}
+
+	                        {{ paginate }} 
+	                        	{{ partial:pagination }}
+	                        {{ /paginate }}  
+                        
+                        {{ /if }}
+
+                        {{ if collections == "blogs" }}
+                        	{{ /collection:blogs }}
+                        {{ /if }}
+                    </div>
+                </section>
+                <!-- end-blog-classic-section -->
+				{{ /if }}

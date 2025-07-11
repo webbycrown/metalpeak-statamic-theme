@@ -1,0 +1,54 @@
+title: 'Contact Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: description
+    field:
+      type: textarea
+      display: Description
+      validate:
+        - required
+  -
+    handle: google_map_iframe
+    field:
+      type: textarea
+      display: 'Google Map Iframe'
+      validate:
+        - required
+  -
+    handle: contact_info
+    field:
+      type: grid
+      display: 'Contact Info'
+      fields:
+        -
+          handle: icon
+          field:
+            container: assets
+            type: assets
+            display: Icon
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: lines
+          field:
+            type: grid
+            display: Lines
+            fields:
+              -
+                handle: line
+                field:
+                  type: text
+                  display: line
+  -
+    handle: form_title
+    field:
+      type: text
+      display: 'Form Title'

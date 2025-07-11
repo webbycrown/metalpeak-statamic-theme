@@ -1,0 +1,115 @@
+{{ if segment_1 != "home-two" }}
+ <style type="text/css">
+     .header-two .header-contact a{
+        color:var(--color-primary);
+     }
+     .header-two .wc-social-logo ul li a svg path {
+        fill: var(--color-primary) !important;
+    }
+ </style>
+ {{ /if }}
+ <header class="header header-two">
+        <div class="container">
+            <!-- header-topbar -->
+            <div class="wc-row header-two-top-bar">
+                <div class="wc-column-6">
+                    <div class="header-contact">
+                        {{ footer }}
+                       {{ phone_number }}
+                       {{ if index == 0 }}
+                       <a href="tel:{{ number }}"><span>Call : {{ number }}</span></a>
+                       {{ /if }}
+                       {{ /phone_number }}
+
+                       {{ email_address }}
+                        {{ if index == 0 }}
+                       <a href="mailto:{{ email }}"><span>{{email}}</span></a>
+                       {{ /if }}
+                       {{ /email_address }}
+                       {{ /footer }}
+                    </div>
+                </div>
+                <div class="wc-column-6">
+                    <div class="wc-social-logo">
+                        <ul>
+                         {{ footer }}
+                         {{ socials }}
+                         {{ icon }}
+
+                         <li><a target="_blank" href="{{ url }}"><i class="fa-brands fa-{{ key }}"></i></a> </li>
+                         {{ /icon }}
+                         {{ /socials }}
+                         {{ /footer }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- header-two-navbar -->
+            <div class="wc-navbar">
+                <!-- top-logo -->
+                <div class="mobile-menu">
+                    <div class="bars-btn">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="logo">
+                     <a href="/">{{ setting }}{{ logo }}<img src="{{ url }}" alt="">{{ /logo }}{{ /setting }}</a>
+                </div>
+                <!-- navlist -->
+                <div class="wc-navlist">
+                    <div class="logo">
+                         <a href="/">{{ setting }}{{ logo }}<img src="{{ url }}" alt="">{{ /logo }}{{ /setting }}</a>
+                    </div>
+                    <div class="mobile-navigation">
+                       <ul>
+                        {{ nav:header }}
+                        {{ if title != 'Connect Now' }}
+                        <li class="{{ if children }}parent-menu{{ /if }}">
+                            <a href="{{ url }}" {{ if is_current || is_parent }}class="active"{{ /if }}>
+                                {{ title }}
+                                {{ if children }}<i class="fa-solid fa-angle-down"></i>{{ /if }}
+                            </a>
+
+                            {{ if children }}
+                            <ul class="sub-menu" id="style-4">
+                                {{ children }}
+                                <li>
+                                    <a href="{{ url }}" {{ if is_current }}class="active"{{ /if }}>
+                                        {{ title }}
+                                    </a>
+                                </li>
+                                {{ /children }}
+                            </ul>
+                            {{ /if }}
+                        </li>
+                        {{ /if }}
+                        {{ /nav:header }}
+                        {{ nav:header }}
+                        {{ if title == 'Connect Now' }}
+                        <div class="wc-connect">
+                            <a href="{{ url }}"class="btn btn-primary">{{ title }}</a>
+                        </div>
+                        {{ /if }}
+                        {{ /nav:header }}
+                    </ul>
+                    </div>
+                </div>
+                <div class="wc-social-btn">
+                    <!-- connect-btn -->
+                   {{ nav:header }}
+                    {{ if title == 'Connect Now' }}
+                    <div class="wc-connect">
+                        <a href="{{ url }}" class="btn btn-primary">{{ title }}</a>
+                    </div>
+                    {{ /if }}
+                    {{ /nav:header }}
+                    <div class="bars-btn">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

@@ -1,0 +1,13 @@
+{
+  "name": "webbycrown/metalpeak-statamic-theme",
+  "description": "A Statamic starter kit for information sites.",
+  "type": "statamic-starter-kit",
+  "require": {
+    "statamic/cms": "*"
+  },
+  "extra": {
+    "statamic": {
+      "starter-kit": true
+    }
+  }
+}

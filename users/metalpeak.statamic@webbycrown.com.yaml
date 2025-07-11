@@ -1,0 +1,59 @@
+name: Admin
+super: true
+id: 46885cbe-f8ff-4b8b-917c-65893c862938
+password_hash: $2y$12$Ylvz2srcjpqxTdjG9VsIcO/CIlONmCfT/ZmZNa.0mR0T53wZ6LaZu
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
+    teams:
+      columns:
+        - title
+        - slug
+        - status
+        - image
+        - skill_image
+        - seo_image
+    portfolio:
+      after_save: continue_editing
+      columns:
+        - title
+        - slug
+        - status
+        - thumb_image
+        - seo_image
+        - category
+    services:
+      columns:
+        - title
+        - slug
+        - status
+        - image
+        - seo_title
+        - tag
+        - seo_image
+        - category
+    blogs:
+      columns:
+        - title
+        - slug
+        - status
+        - thumb_image
+        - seo_image
+    faq:
+      columns:
+        - title
+        - slug
+        - status
+        - seo_image
+    testimonial:
+      columns:
+        - title
+        - slug
+        - status
+        - seo_image
+  forms:
+    newsletter:
+      columns:
+        - datestamp
+        - email

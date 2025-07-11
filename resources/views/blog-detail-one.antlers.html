@@ -1,0 +1,137 @@
+<!-- start-banner -->
+{{ setting }}
+{{ if inner_banner_image }}
+{{ inner_banner_image }}
+<section class="banner section" style="background-image: url('{{ url }}');">
+    {{ /inner_banner_image }}
+    {{ else }}
+    <section class="banner section" style="background-image: url('/images/about-banner.jpg');">
+        {{ /if }}
+        {{ /setting }}
+                    <div class="container">
+                        <div class="wc-row">
+                            <div class="wc-column-12">
+                                <div class="banner-wrapper" data-aos="fade-down">
+                                    <h1>Blog detail</h1>
+                                    <ul>
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/blog" class="active">Blog detail</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end-banner -->
+
+                <!-- start-blog-detail-one -->
+                <section class="blog-detail-one section services-detail-three blog-two">
+                    <div class="container">
+                        <div class="blog-detail-wrapper services-detail-three-left">
+                            <!-- blog-detail-image -->
+                            <div class="blog-detail-image-content">
+                                <div class="blog-detail-image mw-img-cover" data-aos="fade-right">
+                                   {{ thumb_image }}<img src="{{ url }}" alt="" class="img object-cover">{{ /thumb_image }}
+                                </div>
+                                <!-- image-bottom-bar -->
+                                <div class="image-bottom-bar">
+                                    {{ team_member }}
+                                    <div class="image-bottom-bar-left">
+                                        {{ image }} <img src="{{ url }}" alt="" class="object-cover"> {{ /image }}
+                                        <p class="name">{{ title }}</p>
+                                        <ul class="date">
+                                            <li>{{ updated_at format="j F, Y" }}</li>
+                                        </ul>
+                                    </div>
+                                    {{ /team_member }}
+                                    
+                                </div>
+                                
+                            </div>
+
+                            {{ description }}
+                            {{ if type == 'text' }}
+                            {{ text }}
+                            {{ /if }}
+                            {{ if type == 'quotes_inner' }}
+                            <div class="blog-detail-quotes" data-aos="fade-left">
+                                <div class="quotes-inner">
+                                    <div class="quotes">
+                                        {{ quote_image }} {{ if quote_image ends_with '.svg' }} {{ svg src="{quote_image}" }} {{ /if }}{{ /quote_image }}
+                                    </div>
+                                    {{ quotes }}
+                                </div>
+                            </div>
+                            {{ /if }}
+
+                            {{ if type == 'images' }}
+                            <div class="blog-detail-iamge-wrapper" data-aos="fade-right">
+                                {{ images }}
+                                <div class="image-grid mw-img-cover">
+                                    <img src="{{ url }}" alt="" class="img object-cover">
+                                </div>
+                                {{ /images }}
+                            </div>
+                            {{ /if }}
+                            {{ /description }}
+                            <!-- quotes-section -->
+                            
+                            <!-- services-link-wrapper -->
+                            <div class="services-link-wrapper">
+                                <div class="hyperlink">
+                                    {{ hyper_link }}
+                                    <a href="{{ url }}" class="link">
+                                        {{ icon }} {{ if icon ends_with '.svg' }} {{ svg src="{icon}" }} {{ /if }}{{ /icon }}
+                                    </a>
+                                    {{ /hyper_link }}
+                                <ul>
+                                     {{ tag }}
+                                     <li>
+                                        <a href="/blog?tag={{slug}}">{{ title }}</a>
+                                    </li>
+                                    {{ /tag }}
+                                </ul>
+                            </div>
+                            <div class="wc-social-logo">
+                                <ul>
+                                    {{ socials }}
+                                    {{ platform }} 
+                                    <li><a href="{{ url }}{{config:app.url}}service/{{ slug }}" target="_blank"><i class="fa-brands fa-{{key}}"></i></a></li>
+                                    {{ /platform }}
+                                    {{ /socials }}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- blog-detail-bottom -->
+                    <div class="blog-detail-bottom" data-aos="fade-right">
+                        <h2>{{ related_blog_text }}</h2>
+                        <div class="blog-two-wrapper">
+                                {{ related_blog limit="2" }}
+                            <div class="blog-right-inner">
+                                <div class="blog-content-image">
+                                    <a href="/blog/{{slug}}">
+                                        {{ thumb_image }}<img src="{{ url }}" alt="" class="object-cover">{{ /thumb_image }}
+                                    </a>
+                                    <div class="blog-date">
+                                        <p>{{ updated_at format="M j, Y" }}</p>
+                                    </div>
+                                </div>
+                                <div class="blog-two-text">
+                                    <a href="/blog/{{slug}}">
+                                        <h4>{{ title }}</h4>
+                                    </a>
+                                    <p>{{ short_description }}</p>
+                                    {{ if read_more_button_text }}
+                                    <div class="blog-two-btn">
+                                        <a href="{{read_more_button_url}}" class="btn btn-primary">{{read_more_button_text}}</a>
+                                    </div>
+                                    {{ /if }}
+                                </div>
+                            </div>
+                                {{ /related_blog }}
+                           
+                        </div>
+                    </div>
+                </section>
+                <!-- two-blog-detail-one -->

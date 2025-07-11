@@ -1,0 +1,212 @@
+{{ if segment_1 == "portfolio-grid" }}
+            <!-- start-portfolio-grid -->
+            <section class="portfolio-grid team section">
+                <div class="container">
+                    <!-- team-head-wrapper -->
+                    <div class="wc-row team-head-wrapper">
+                        <div class="wc-column-12">
+                            <!-- title -->
+                            <div class="team-head-title" data-aos="fade-right">
+                                <h2 class="mw-sub-title">{{ section_title }}</h2>
+                                <p>{{ description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- image-grid -->
+                        {{ if collections == "portfolio" }}
+
+                        {{ collection:portfolio  as="portfolio" paginate={paginate} limit="{limit}" }}
+
+                        {{ /if }}
+                    <div class="portfolio-grid-wrapper grid_append" data-aos="fade-left">
+
+                        {{ portfolio }}
+                        <a href="/portfolio/{{slug}}" class="portfolio-image grid-item-append">
+                           {{ thumb_image }} <img src="{{ url }}" alt="">{{ /thumb_image }}
+                            <div class="portfolio-design">
+                                <h4>{{ title }}
+                                    <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_792_406)">
+                                            <path
+                                            d="M9.26698 5.50739C9.34536 5.44084 9.4361 5.39042 9.53401 5.35902C9.63192 5.32762 9.73506 5.31585 9.83753 5.3244L19.7434 6.19105C19.8462 6.19961 19.9462 6.22845 20.0378 6.27588C20.1294 6.32332 20.2107 6.38841 20.2769 6.46742C20.3432 6.54642 20.3932 6.63777 20.424 6.7362C20.4549 6.83462 20.4659 6.93817 20.4565 7.04088L19.5898 16.9467C19.5808 17.0494 19.5517 17.1492 19.5042 17.2406C19.4566 17.332 19.3915 17.4131 19.3126 17.4793C19.2337 17.5455 19.1425 17.5955 19.0442 17.6265C18.946 17.6575 18.8426 17.6688 18.74 17.6598C18.6374 17.6508 18.5375 17.6217 18.4461 17.5742C18.3548 17.5266 18.2737 17.4615 18.2074 17.3826C18.1412 17.3037 18.0912 17.2125 18.0602 17.1142C18.0292 17.016 18.0179 16.9126 18.0269 16.81L18.8312 7.68058L9.70079 6.88732C9.59801 6.87875 9.49795 6.84992 9.40637 6.80249C9.31479 6.75505 9.23351 6.68995 9.16721 6.61095C9.10092 6.53194 9.05093 6.44059 9.02011 6.34217C8.9893 6.24374 8.97829 6.14019 8.9877 6.03749C8.99707 5.9351 9.02657 5.83557 9.0745 5.7446C9.12242 5.65363 9.18783 5.57302 9.26698 5.50739Z"
+                                            fill="#323232" />
+                                            <path
+                                            d="M4.81118 18.4263L19.1745 6.37408C19.3332 6.2409 19.5384 6.17622 19.7448 6.19428C19.9512 6.21233 20.142 6.31165 20.2752 6.47038C20.4084 6.6291 20.473 6.83423 20.455 7.04064C20.4369 7.24706 20.3376 7.43784 20.1789 7.57103L5.81554 19.6233C5.65681 19.7565 5.45168 19.8212 5.24527 19.8031C5.03886 19.785 4.84807 19.6857 4.71489 19.527C4.5817 19.3683 4.51703 19.1631 4.53508 18.9567C4.55314 18.7503 4.65246 18.5595 4.81118 18.4263Z"
+                                            fill="#323232" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_792_406">
+                                                <rect width="25" height="25" fill="white"
+                                                transform="translate(0 0.5)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </h4>
+                            </div>
+                        </a>    
+                        {{ /portfolio }}
+
+                    </div>
+                    {{ paginate }}
+                    <!-- our services grid loader -->
+                    <input type="hidden" class="lastPage" value="{{ total_pages }}">
+                    <input type="hidden" class="currentPage" value="{{ current_page }}">
+                    {{ if next_page }} 
+                    <div class="load-more-wrap">
+                        <div class="load-btn" style="text-align: center;">
+                            <a href="{{ next_page }}" class="btn btn-primary ajax-load-more-grid">Load More <img src="{{theme:asset}}assets/images/loader.svg" alt="loader" class="object-cover hidden"></a>
+                        </div>
+                    </div>
+                    {{ /if }}
+
+                    {{ /paginate }}  
+                        {{ if collections == "portfolio" }}
+                        {{ /collection:portfolio }}
+                        {{ /if }}
+                       
+                </div>
+            </section>
+            <!-- end-portfolio-grid -->
+            {{ /if }}
+
+            {{ if segment_1 == "portfolio-masonary" }}
+
+
+            <section class="portfolio-masonary team section">
+                    <div class="container">
+                        <!-- team-head-wrapper -->
+                        <div class="wc-row team-head-wrapper">
+                            <div class="wc-column-12">
+                                <!-- title -->
+                                <div class="team-head-title" data-aos="fade-right">
+                                  <h2 class="mw-sub-title">{{ section_title }}</h2>
+                                  <p>{{ description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- image-masonary-grid -->
+                        {{ if collections == "portfolio" }}
+
+                        {{ collection:portfolio  as="portfolio" paginate={paginate} limit="{limit}" }}
+
+                        {{ /if }}
+                        <div class="grid" data-aos="fade-left">
+                            <div class="grid-sizer"></div>
+                            <div class="grid_append">
+                                {{ portfolio }}
+                                <a href="/portfolio/{{slug}}" class="grid-item grid-item-append">
+                                   {{ thumb_image }} <img src="{{ url }}" alt="">{{ /thumb_image }}
+                                   <div class="portfolio-design">
+                                    <h4>{{ title }}
+                                        <svg width="25" height="26" viewBox="0 0 25 26" fill="none"xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_792_412)">
+                                                <path
+                                                d="M9.26698 5.50739C9.34536 5.44084 9.4361 5.39042 9.53401 5.35902C9.63192 5.32762 9.73506 5.31585 9.83753 5.3244L19.7434 6.19105C19.8462 6.19961 19.9462 6.22845 20.0378 6.27588C20.1294 6.32332 20.2107 6.38841 20.2769 6.46742C20.3432 6.54642 20.3932 6.63777 20.424 6.7362C20.4549 6.83462 20.4659 6.93817 20.4565 7.04088L19.5898 16.9467C19.5808 17.0494 19.5517 17.1492 19.5042 17.2406C19.4566 17.332 19.3915 17.4131 19.3126 17.4793C19.2337 17.5455 19.1425 17.5955 19.0442 17.6265C18.946 17.6575 18.8426 17.6688 18.74 17.6598C18.6374 17.6508 18.5375 17.6217 18.4461 17.5742C18.3548 17.5266 18.2737 17.4615 18.2074 17.3826C18.1412 17.3037 18.0912 17.2125 18.0602 17.1142C18.0292 17.016 18.0179 16.9126 18.0269 16.81L18.8312 7.68058L9.70079 6.88732C9.59801 6.87875 9.49795 6.84992 9.40637 6.80249C9.31479 6.75505 9.23351 6.68995 9.16721 6.61095C9.10092 6.53194 9.05093 6.44059 9.02011 6.34217C8.9893 6.24374 8.97829 6.14019 8.9877 6.03749C8.99707 5.9351 9.02657 5.83557 9.0745 5.7446C9.12242 5.65363 9.18783 5.57302 9.26698 5.50739Z"
+                                                fill="#323232" />
+                                                <path
+                                                d="M4.81118 18.4263L19.1745 6.37408C19.3332 6.2409 19.5384 6.17622 19.7448 6.19428C19.9512 6.21233 20.142 6.31165 20.2752 6.47038C20.4084 6.6291 20.473 6.83423 20.455 7.04064C20.4369 7.24706 20.3376 7.43784 20.1789 7.57103L5.81554 19.6233C5.65681 19.7565 5.45168 19.8212 5.24527 19.8031C5.03886 19.785 4.84807 19.6857 4.71489 19.527C4.5817 19.3683 4.51703 19.1631 4.53508 18.9567C4.55314 18.7503 4.65246 18.5595 4.81118 18.4263Z"
+                                                fill="#323232" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_792_406">
+                                                    <rect width="25" height="25" fill="white"
+                                                    transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </h4>
+                                </div>
+                            </a>
+                            {{ /portfolio }}
+                        </div>
+                        </div>
+
+                        {{ paginate }}
+                        <!-- our services grid loader -->
+                        <input type="hidden" class="lastPage" value="{{ total_pages }}">
+                        <input type="hidden" class="currentPage" value="{{ current_page }}">
+                        {{ if next_page }} 
+                        <div class="load-more-wrap">
+                            <div class="load-btn" style="text-align: center;">
+                                <a href="{{ next_page }}" class="btn btn-primary ajax-load-more-grid">Load More <img src="{{theme:asset}}assets/images/loader.svg" alt="loader" class="object-cover hidden"></a>
+                            </div>
+                        </div>
+                        {{ /if }}
+
+                        {{ /paginate }}  
+
+                        {{ if collections == "portfolio" }}
+                        {{ /collection:portfolio }}
+                        {{ /if }}
+                    </div>
+                </section>
+
+            
+            {{ /if }}
+
+            {{ if segment_1 == "portfolio-slider" }}
+
+            <section class="Portfolio-Slider portfolio-grid team section">
+                    <div class="container">
+                        <!-- team-head-wrapper -->
+                        <div class="wc-row team-head-wrapper">
+                            <div class="wc-column-12">
+                                <!-- title -->
+                                <div class="team-head-title" data-aos="fade-right">
+                                 <h2 class="mw-sub-title">{{ section_title }}</h2>
+                                 <p>{{ description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- image-portfolio-slider -->
+                        <div class="portfolio-grid-wrapper Portfolio-Slider-wrapper" data-aos="fade-left">
+                            <!-- Swiper -->
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+
+                                    {{ if collections == "portfolio" }}
+
+                                    {{ collection:portfolio  as="portfolio" limit="{limit}" }}
+
+                                    {{ /if }}
+                                    {{ portfolio }}
+                                    <div class="swiper-slide">
+                                        <a href="/portfolio/{{slug}}" class="portfolio-image">
+                                            {{ thumb_image }} <img src="{{ url }}" alt="">{{ /thumb_image }}
+                                            <div class="portfolio-design">
+                                                <h4>{{ title }}
+                                                    <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_792_406)">
+                                                            <path
+                                                            d="M9.26698 5.50739C9.34536 5.44084 9.4361 5.39042 9.53401 5.35902C9.63192 5.32762 9.73506 5.31585 9.83753 5.3244L19.7434 6.19105C19.8462 6.19961 19.9462 6.22845 20.0378 6.27588C20.1294 6.32332 20.2107 6.38841 20.2769 6.46742C20.3432 6.54642 20.3932 6.63777 20.424 6.7362C20.4549 6.83462 20.4659 6.93817 20.4565 7.04088L19.5898 16.9467C19.5808 17.0494 19.5517 17.1492 19.5042 17.2406C19.4566 17.332 19.3915 17.4131 19.3126 17.4793C19.2337 17.5455 19.1425 17.5955 19.0442 17.6265C18.946 17.6575 18.8426 17.6688 18.74 17.6598C18.6374 17.6508 18.5375 17.6217 18.4461 17.5742C18.3548 17.5266 18.2737 17.4615 18.2074 17.3826C18.1412 17.3037 18.0912 17.2125 18.0602 17.1142C18.0292 17.016 18.0179 16.9126 18.0269 16.81L18.8312 7.68058L9.70079 6.88732C9.59801 6.87875 9.49795 6.84992 9.40637 6.80249C9.31479 6.75505 9.23351 6.68995 9.16721 6.61095C9.10092 6.53194 9.05093 6.44059 9.02011 6.34217C8.9893 6.24374 8.97829 6.14019 8.9877 6.03749C8.99707 5.9351 9.02657 5.83557 9.0745 5.7446C9.12242 5.65363 9.18783 5.57302 9.26698 5.50739Z"
+                                                            fill="#323232" />
+                                                            <path
+                                                            d="M4.81118 18.4263L19.1745 6.37408C19.3332 6.2409 19.5384 6.17622 19.7448 6.19428C19.9512 6.21233 20.142 6.31165 20.2752 6.47038C20.4084 6.6291 20.473 6.83423 20.455 7.04064C20.4369 7.24706 20.3376 7.43784 20.1789 7.57103L5.81554 19.6233C5.65681 19.7565 5.45168 19.8212 5.24527 19.8031C5.03886 19.785 4.84807 19.6857 4.71489 19.527C4.5817 19.3683 4.51703 19.1631 4.53508 18.9567C4.55314 18.7503 4.65246 18.5595 4.81118 18.4263Z"
+                                                            fill="#323232" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_792_406">
+                                                                <rect width="25" height="25" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </h4>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {{ /portfolio }}
+                                    {{ if collections == "portfolio" }}
+                                    {{ /collection:portfolio }}
+                                    {{ /if }}
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+
+
+            {{ /if }}

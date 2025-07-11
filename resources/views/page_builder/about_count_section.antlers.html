@@ -1,0 +1,16 @@
+<section class="about-count background-primary section">
+    <div class="container">
+        <!-- about-count -->
+        <div id="counter" class="wc-row training-two-count-wrapper" data-aos="fade-down">
+            {{ items }}
+            <div class="wc-column-3">
+                <!-- count -->
+                <div class="wc-count">
+                    <h2 class="count plus" data-count="{{item_count}}">{{ suffix }} {{item_count}}</h2>
+                    <p>{{ title }}</p>
+                </div>
+            </div>
+            {{ /items }}
+        </div>
+    </div>
+</section>

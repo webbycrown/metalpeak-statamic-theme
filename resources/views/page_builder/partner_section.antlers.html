@@ -1,0 +1,26 @@
+<!-- start-partner-section -->
+            <section class="partner background-secondary section">
+                <div class="container">
+                    <!-- partner-title -->
+                    <div class="partner-title">
+                        <h2 class="mw-sub-title">{{ section_title }}</h2>
+                    </div>
+                    <div class="partner-image" data-aos="fade-right">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                {{ partner_logos }}
+                                <div class="swiper-slide">
+                                    <a href="javascript:;">
+                                        <div class="wc-image">
+                                            <img src="{{ url }}" alt="{{ alt ?? 'Partner Logo' }}">
+                                        </div>
+                                    </a>
+                                </div>
+                                {{ /partner_logos }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end-partner-section -->

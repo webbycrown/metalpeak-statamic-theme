@@ -1,0 +1,30 @@
+<!-- start-banner -->
+{{ setting }}
+{{ if inner_banner_image }}
+{{ inner_banner_image }}
+<section class="banner section" style="background-image: url('{{ url }}');">
+    {{ /inner_banner_image }}
+    {{ else }}
+    <section class="banner section" style="background-image: url('/images/about-banner.jpg');">
+        {{ /if }}
+        {{ /setting }}
+        <div class="container">
+            <div class="wc-row">
+                <div class="wc-column-12">
+                    <div class="banner-wrapper" data-aos="fade-down">
+                        <h1>Services detail</h1>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/service" class="active">Services detail</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- end-banner -->
+
+{{ page_builder scope="block" }}
+
+{{ partial src="page_builder/{type}" }}
+{{ /page_builder }}

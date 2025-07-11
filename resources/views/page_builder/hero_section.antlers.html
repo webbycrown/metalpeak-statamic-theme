@@ -1,0 +1,192 @@
+ <!-- start-hero-section -->
+ {{ if is_homepage }}
+            <section class="hero">
+                <!-- hero-vector -->
+                {{ slides }}
+                <div class="hero-vector hero-vector1">
+                  {{ right_image }}  <img src="{{ url }}" alt=""> {{ /right_image }}
+                </div>
+                <div class="container">
+                    <div class="wc-hero">
+                        <!-- hero-title -->
+                        <div class="hero-title" data-aos="fade-right">
+                            <h1>{{  heading }}</h1>
+                            <p>{{ description }}</p>
+                            {{ if button_text }}
+                            <div class="hero-btn">
+                                <a href="{{ button_url }}" class="btn btn-primary">{{ button_text }}</a>
+                            </div>
+                            {{ /if }}
+                        </div>
+
+                        <!-- hero-image -->
+                        <div class="hero-image">
+                            <div class="wc-hero-image mw-img-cover">
+                                {{ left_images }}<img src="{{ url }}" class="mw-image img" alt="">{{ /left_images }}
+                                <div class="hero-image-text">
+                                    <h2>{{ image_text }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- hero-vector -->
+                <div class="hero-vector hero-vector2">
+                    <img src="{{ theme:asset }}assets/images/Ellipse 39.png" alt="">
+                </div>
+                {{ /slides }}
+            </section>
+            {{ /if }}
+
+
+            {{ if segment_1 == 'home-two' }}
+                 <section class="hero-two">
+                <div class="container">
+                    <div class="hero-content">
+                        <!-- hero-prev-btn -->
+                        <div class="hero-prev-btn">
+                            <svg class="slider-btn" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="16" width="32" height="2" rx="1" fill="white" />
+                                <path d="M2 17C4.33333 16.6667 9.7 14.2 12.5 7" stroke="white" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2 17C4.33333 17.3333 9.7 19.8 12.5 27" stroke="white" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <!-- hero-text -->
+
+                        <!-- Swiper -->
+                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                            <div class="swiper-wrapper">
+                                 {{ slides }}
+                                <div class="swiper-slide">
+                                    <div class="hero-text" data-aos="fade-down">
+                                        <h1>{{ heading }}</h1>
+                                        <p>{{ description }}</p>
+                                        {{ if button_text }}
+                                        <div class="hero-btn">
+                                            <a href="{{ button_url }}" class="btn btn-secondary">{{ button_text }}</a>
+                                        </div>
+                                        {{ /if }}
+                                    </div>
+                                </div>
+                                {{ /slides }}
+                            </div>
+                        </div>
+
+                        <!-- hero-next-btn -->
+                        <div class="hero-next-btn">
+                            <svg class="slider-btn" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="33" y="18" width="32" height="2" rx="1" transform="rotate(-180 33 18)"
+                                fill="white" />
+                                <path d="M32 17C29.6667 17.3333 24.3 19.8 21.5 27" stroke="white" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M32 17C29.6667 16.6667 24.3 14.2 21.5 7" stroke="white" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-two-back-image">
+                    <div thumbsSlider="" class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                             {{ slides }}
+                            <div class="swiper-slide">
+                               {{ left_images }} <img src="{{ url }}" />{{ /left_images }}
+                            </div>
+                             {{ /slides }}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {{ /if }}
+
+
+            {{ if segment_1 == 'home-three' }}
+
+            <section class="hero-three background-secondary">
+                <div class="hero-three-vector1">
+                    <img src="{{ theme:asset }}assets/images/vector-three1.png" alt="">
+                </div>
+                <div class="hero-three-vector2">
+                    <img src="{{ theme:asset }}assets/images/vector-three2.png" alt="">
+                </div>
+                <div class="hero-three-slider-btn">
+                    <!-- hero-prev-btn -->
+                    <div class="hero-prev-btn">
+                        <svg class="slider-btn" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="16" width="32" height="2" rx="1" fill="white" />
+                            <path d="M2 17C4.33333 16.6667 9.7 14.2 12.5 7" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2 17C4.33333 17.3333 9.7 19.8 12.5 27" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <!-- hero-next-btn -->
+                    <div class="hero-next-btn">
+                        <svg class="slider-btn" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="33" y="18" width="32" height="2" rx="1" transform="rotate(-180 33 18)"
+                            fill="white" />
+                            <path d="M32 17C29.6667 17.3333 24.3 19.8 21.5 27" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M32 17C29.6667 16.6667 24.3 14.2 21.5 7" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        {{ slides }}
+                        <div class="swiper-slide">
+                            <div class="container">
+                                <!-- hero-three -->
+                                <div class="wc-row hero-three-slider">
+                                    <div class="wc-column-6 hero-three-slider-left">
+                                        <div class="hero-three-content" data-aos="fade-right">
+                                            <h1>{{heading}}</h1>
+                                            <p>{{description}}</p>
+                                            {{ if button_text }}
+                                            <div class="hero-btn">
+                                                <a href="{{ button_url }}" class="btn btn-secondary">{{ button_text }}</a>
+                                            </div>
+                                            {{ /if }}
+
+                                        </div>
+                                    </div>
+                                    <div class="wc-column-6 hero-three-slider-right">
+                                        <div class="hero-three-image" data-aos="fade-left">
+                                            <div class="image-wrapper">
+                                            {{ left_images }}
+                                                {{ if index == 0 || index == 1 }}
+                                                <div class="image">
+                                                    <img src="{{ url }}" alt="">
+                                                </div>
+                                               {{ /if }}
+                                            {{ /left_images }}
+                                            </div>
+                                            <div class="image-wrapper-sec">
+                                                {{ left_images }}
+                                                {{ if index == 2 }}
+                                                <div class="image">
+                                                    <img src="{{ url }}" alt="">
+                                                </div>
+                                                {{ /if }}
+                                                {{ /left_images }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ /slides }}
+                    </div>
+                </div>
+                <div class="hero-three-vector3">
+                    <img src="{{ theme:asset }}assets/images/vector-three3.png" alt="">
+                </div>
+            </section>
+
+            {{ /if }}
+            <!-- end-hero-section -->

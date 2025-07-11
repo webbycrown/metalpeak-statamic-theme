@@ -1,0 +1,32 @@
+<section class="counter-three background-secondary">
+    <div class="container">
+        <div class="wc-row counter-three-image">
+            <div class="wc-column-12">
+                <!-- counter-video -->
+                <div class="counter-three-video" data-aos="fade-down">
+                    {{ video_image }}<img src="{{ url }}" alt="">{{ /video_image }}
+                    <div class="counter-video-btn">
+                        <a href="{{ video_url }}" class="popup-youtube">
+                           {{ play_button_image }} <img src="{{ url }}" alt=""> {{ /play_button_image }}
+                        </a>
+                    </div>
+                </div>
+                <!-- counter-title -->
+                <div class="counter-three-title" data-aos="fade-left">
+                    <h2 class="mw-sub-title ">{{ section_title }}</h2>
+                </div>
+            </div>
+        </div>
+        <!-- trining-count -->
+        <div id="counter" class="wc-row counter-three-number" data-aos="fade-right">
+            {{ stat_items }}
+            <div class="wc-column-3">
+                <div class="wc-count">
+                    <h2 class="count plus" data-count="{{ count_number }}">{{ count_number }}</h2>
+                    <p>{{ count_label }}</p>
+                </div>
+            </div>
+            {{ /stat_items }}
+        </div>
+    </div>
+</section>

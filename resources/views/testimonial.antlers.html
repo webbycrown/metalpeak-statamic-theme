@@ -1,0 +1,42 @@
+{{ if show_hero_section == true }}
+{{ partial:inner-hero-section }}
+{{ /if }}
+<!-- end-banner -->
+
+<!-- start-testimonial-section -->
+<section class="testimonial-three section testimonial-page">
+    {{ collection:testimonial as="testimonial" title:contains="{ get:s }" slug:contains="{ get:s }" paginate="true" limit="4" }}
+    <div class="container">
+        <div class="testimonial-wrapper-three grid_append">
+            <!-- testimonial-content -->
+            {{ testimonial }}
+            <div class="testimonial-content grid-item-append" data-aos="fade-right">
+                <div class="testimonial-image">
+                    {{ image }}<img src="{{ url }}" alt="" class="object-cover">{{ /image }}
+                </div>
+                <div class="testimonial-info">
+                    <h4>{{ title }}</h4>
+                    <p>{{ position }}</p>
+                    <p>{{ description }} </p>
+                </div>
+            </div>
+            <!-- testimonial-content -->
+            {{ /testimonial }}
+        </div>
+        {{ paginate }}
+        <!-- our services grid loader -->
+        <input type="hidden" class="lastPage" value="{{ total_pages }}">
+        <input type="hidden" class="currentPage" value="{{ current_page }}">
+        {{ if next_page }} 
+        <div class="load-more-wrap">
+            <div class="load-btn" style="text-align: center;">
+                <a href="{{ next_page }}" class="btn btn-primary ajax-load-more-grid">Load More <img src="{{theme:asset}}assets/images/loader.svg" alt="loader" class="object-cover hidden"></a>
+            </div>
+        </div>
+        {{ /if }}
+
+        {{ /paginate }}  
+    </div>
+    {{ /collection:testimonial }}
+</section>
+<!-- end-testimonial-section -->

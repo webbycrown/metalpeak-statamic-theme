@@ -1,0 +1,42 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: service_single_page
+            field:
+              options:
+                -
+                  key: service-detail-one
+                  value: 'Service detail one'
+                -
+                  key: service-detail-two
+                  value: 'Service detail two'
+                -
+                  key: service-detail-three
+                  value: 'Service detail three'
+                -
+                  key: service-detail-four
+                  value: 'Service detail four'
+              default: 'Service detail four'
+              type: select
+              display: 'Service Single Page'
+              listable: true
+          -
+            handle: blog_single_page
+            field:
+              options:
+                -
+                  key: blog-detail-one
+                  value: 'Blog detail one'
+                -
+                  key: blog-detail-two
+                  value: 'Blog detail two'
+                -
+                  key: blog-detail-three
+                  value: 'Blog detail three'
+              default: 'Blog detail one'
+              type: select
+              display: 'Blog Single Page'

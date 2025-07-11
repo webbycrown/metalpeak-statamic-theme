@@ -1,0 +1,80 @@
+{{ if is_homepage }}
+<section class="portfolio section background-secondary">
+    <div class="hero-vector hero-vector1">
+        <img src="{{ theme:asset  src='assets/images/Ellipse 41.png' }}" alt="">
+    </div>
+    <div class="container">
+        <div class="portfolio-head">
+            <!-- title -->
+            <div class="portfolio-title" data-aos="fade-down">
+                <h2 class="mw-sub-title">{{ section_title  }}</h2>
+            </div>
+
+            <!-- tab-btn -->
+            <div class="portfolio-tab" data-aos="fade-up">
+                <ul class="portfolio-list">
+                    {{ tab_items }}
+                    <li><a href="#tab{{ index+1 }}" class="btn {{ if (index+1) == 1 }}active{{ /if }}">{{ tab_button_title }}</a></li>
+                    {{ /tab_items }}
+                </ul>
+            </div>
+        </div>
+
+        <!-- tab-content -->
+        {{ tab_items }}
+        <div class="wc-row portfolio-wrapper portfolio-tab-content" id="tab{{ index+1 }}">
+            <div class="wc-column-6">
+                <div class="portfolio-image mw-img-cover" data-aos="fade-right">
+                    {{ tab_image }}<img src="{{ url }}" alt="" class="mw-image img">{{ /tab_image }}
+                </div>
+            </div>
+            <div class="wc-column-6">
+                <div class="portfolio-content" data-aos="fade-left">
+                    <h2 class="mw-sub-title">{{ content_title }}</h2>
+                    <p>{{ content_description }}</p>
+                    {{ if button_text }}
+                    <div class="portfolio-btn">
+                        <a href="{{ button_url }}" class="btn btn-primary">{{ button_text }}</a>
+                    </div>
+                    {{ /if }}
+                </div>
+            </div>
+        </div>
+        {{ /tab_items }}
+    </div>
+    <!-- hero-vector -->
+    <div class="hero-vector hero-vector2">
+        <img src="{{ theme:asset  src='assets/images/Ellipse 40.png' }}" alt="">
+    </div>
+</section>
+{{ /if }}
+
+{{ if segment_1 == "home-two" }}
+<section class="work section">
+    <div class="container">
+        <div class="wc-row work-wrap">
+            <!-- work-image -->
+            <div class="wc-column-6 work-image" data-aos="fade-right">
+                {{ tab_items }}
+                {{ if index == 1 }}
+                {{ tab_image }}
+                <img src="{{ url }}" alt="" class="mw-image">
+                {{ /tab_image }}
+                {{ /if }}
+                {{ /tab_items }}
+            </div>
+            <div class="wc-column-6 work-content" data-aos="fade-left">
+                <!-- work-content-head -->
+                <h2 class="mw-sub-title">{{ section_title }}</h2>
+                <!-- work-content-text -->
+                {{ tab_items }}
+                <div class="work-text">
+                    <h4>0{{ index + 1 }}. {{ content_title }}</h4>
+                    <p>{{ content_description }}</p>
+                </div>
+                {{ /tab_items }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ /if }}

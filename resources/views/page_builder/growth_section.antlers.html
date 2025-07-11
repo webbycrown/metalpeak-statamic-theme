@@ -1,0 +1,105 @@
+{{ if segment_1 == "service-detail" || segment_1 == "service-detail-two"  }}
+{{ if section_type == 'detail_page_1' }}            
+<!-- start-services-detail-one --> <!-- start-services-detail-two -->
+<section class="services-detail-one section">
+    <div class="container">
+        <div class="wc-row">
+            <div class="wc-column-12">
+
+                <div class="growth-wrapper">
+
+                    <div class="image-slider-wrapper" data-aos="fade-right">
+
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                {{ images }}
+                                <div class="swiper-slide">
+                                    <div class="image-slider mw-img-cover">
+                                        <img src="{{ url }}" alt="" class="img">
+                                    </div>
+                                </div>
+                                {{ /images }}
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="growth-content" data-aos="fade-left">
+                        {{ description }}
+                        {{ if type == 'text' }}
+                        {{ text }}
+                        {{ /if }}
+
+                        {{ if type == 'new_set' }}
+                        <ul>
+                            {{ bullet_points }}
+                            <li> {{ point }}</li>
+                            {{ /bullet_points }}
+                            </ul>
+                                {{ /if }}
+
+                                {{ /description }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{ /if }}
+        {{ /if }}
+
+        {{ if segment_1 == "service-detail-three"}}
+        {{ if section_type == 'detail_page_3' }}   
+         <section class="services-detail-two section">
+                <div class="container">
+                    <div class="wc-row">
+                        <div class="wc-column-12">
+                            <div class="services-detail-image-box">
+                                <!-- services-detail-left -->
+                                <div class="services-detail-left" data-aos="fade-right">
+                                 {{ description }}
+                                 {{ if type == 'text' }}
+                                 {{ text }}
+                                 {{ /if }}
+
+                                 {{ if type == 'new_set' }}
+                                 <ul>
+                                    {{ bullet_points }}
+                                    <li> {{ point }}</li>
+                                    {{ /bullet_points }}
+                                    <ul>
+                                        {{ /if }}
+
+                                        {{ /description }}
+                                    <!-- btn -->
+                                    {{ button }}
+                                    {{ if button_text }}
+                                    <div class="services-detail-btn">
+                                        <a href="{{ button_link }}" class="btn btn-primary">{{ button_text }}</a>
+                                    </div>
+                                    {{ /if }}
+                                    {{ /button }}
+                                </div>
+                                <!-- services-detail-right -->
+                                <div class="services-detail-right" data-aos="fade-left">
+                                    <!-- image-grid -->
+                                    {{ images }}
+                                 <div class="image mw-img-cover">
+                                        <img src="{{ url }}" alt="" class="img">
+                                        <div class="blog-date">
+                                            {{ updated_at format="M j, Y" }}
+                                        </div>
+                                </div>
+                                {{ /images }}
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        {{ /if }}
+        {{ /if }}

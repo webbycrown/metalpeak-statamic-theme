@@ -1,0 +1,52 @@
+<head>
+    
+    <!-- Title Tag  -->
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    {{ setting }}{{ favicon }}<link rel="icon" type="image/png" href="{{ url }}">{{ /favicon }}{{ /setting }}
+    <!-- Title Tag  -->
+    <title>{{ title ?? site:name }}</title>
+    <meta name="app-env" content="{{ config:app.env }}">
+    <meta name="title" content="{{ title ?? site:name }}">
+    <meta name="description" content="{{ seo_description ?? 'Discover beautiful content and services at ' }}">
+    <meta property="og:title" content="{{ seo_title ?? site:name }}">
+    <meta property="og:description" content="{{ seo_description ?? 'Explore services and stories with us.' }}">
+    <meta property="og:image" content="{{ link to="{{seo_image:url}}" absolute="true" }}">
+
+    <meta name="twitter:title" content="{{ seo_title ?? site:name }}">
+    <meta name="twitter:description" content="{{ seo_description ?? 'Explore services and stories with us.' }}">
+    <meta name="twitter:image" content="{{ link to="{{seo_image:url}}" absolute="true" }}">
+    <meta name="twitter:image:secure_url" content="{{ link to="{{seo_image:url}}" absolute="true" }}">
+    <meta name="twitter:image:width" content="1200">
+    <meta name="twitter:image:height" content="630">
+
+
+    <!--------------- <===== style-sheet =====> ------------------>
+
+    <!-- all-min-css -->
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/all.min.css' }}?v={{ now format="YmdHis" }}" >
+
+    <!-- animate-css -->
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/animate.min.css' }}?v={{ now format="YmdHis" }}">
+
+    <!-- aos-css -->
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/aos.css' }}?v={{ now format="YmdHis" }}">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/fontawesome.min.css' }}?v={{ now format="YmdHis" }}">
+
+    <!-- magnific-pop -->
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/magnific-popup.css' }}?v={{ now format="YmdHis" }}">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/swiper-bundle.min.css' }}?v={{ now format="YmdHis" }}">
+
+
+    <!--------------- <===== style-sheet =====> ------------------>
+
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/reset.css' }}?v={{ now format="YmdHis" }}">
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/style.css' }}?v={{ now format="YmdHis" }}">
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/media.css' }}?v={{ now format="YmdHis" }}">
+
+</head>

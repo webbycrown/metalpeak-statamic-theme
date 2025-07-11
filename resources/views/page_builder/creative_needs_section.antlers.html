@@ -1,0 +1,31 @@
+<section class="needs section">
+    <div class="container">
+        <!-- needs-wrapper -->
+        <div class="wc-row needs-wrapper">
+            <div class="wc-column-6">
+                <!-- needs-content -->
+                <div class="needs-content" data-aos="fade-right">
+                    <h2 class="mw-sub-title">{{ section_title }}</h2>
+                    <p>{{ section_description }}</p>
+                    {{ if button_text }}
+                    <div class="needs-btn">
+                        <a href="{{ button_url }}" class="btn btn-primary">{{button_text}}</a>
+                    </div>
+                    {{ /if }}
+                </div>
+            </div>
+            <div class="wc-column-6">
+                <!-- needs-image -->
+                <div class="needs-image mw-img-cover" data-aos="fade-left">
+                    {{ image }}<img src="{{ url }}" class="mw-image img" alt="">{{ /image }}
+                    {{ if video_link }}
+                    <div class="nedds-video-btn">
+                        <a href="{{ video_link }}"
+                        class="popup-youtube btn btn-primary"><i class="fa-solid fa-play"></i></a>
+                    </div>
+                    {{ /if }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

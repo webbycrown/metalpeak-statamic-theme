@@ -1,0 +1,148 @@
+{{ if is_homepage }}
+<section class="testimonial section">
+    <div class="container">
+        <div class="wc-row">
+            <div class="wc-column-12">
+                <div class="testimonial-wrapper" data-aos="fade-right">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            {{ if collections == "testimonial" }}
+                            {{ collection:testimonial as="testimonial" paginate={paginate} limit="{limit}" }}
+                            {{ /if }}
+                            {{ testimonial }}
+                            <div class="swiper-slide">
+                                <div class="testimonial-slider">
+                                    <div class="quotes-image">
+                                        <img src="{{ theme:asset }}assets/images/testimonial-quotes.png" alt="">
+                                    </div>
+                                    <p>{{ description }}</p>
+                                    <div class="testimonial-image">
+                                        {{ image }}<img src="{{ url }}" alt="">{{ /image }}
+                                    </div>
+                                    <h5>{{ title }}</h5>
+                                    <p class="testimonial-founder">{{ position }}</p>
+                                </div>
+                            </div>
+                            {{ /testimonial }}
+                             {{ if collections == "testimonial" }}
+                            {{ /collection:testimonial }}
+                            {{ /if }}
+                        </div>
+                        <!-- slider-btn -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonial-bg-image -->
+    <div class="testimonial-bg-image">
+        {{ background_image }}<img src="{{ url }}" alt="">{{ /background_image }}
+    </div>
+</section>
+{{ /if }}
+
+{{ if segment_1 == "home-two" }}
+<section class="testimonial-two section">
+    <div class="container">
+        <div class="testimonial-two-title" data-aos="fade-down">
+            <h2 class="mw-sub-title">{{ section_title }}</h2>
+        </div>
+        <div class="testimonial-two-wrapper" data-aos="fade-right">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {{ if collections == "testimonial" }}
+                    {{ collection:testimonial as="testimonial" paginate={paginate} limit="{limit}" }}
+                    {{ /if }}
+                    {{ testimonial }}
+                    <div class="swiper-slide">
+                        <a href="/testimonial" class="testimonial-two-col">
+                            <h2>“</h2>
+                            <p>{{ description }}</p>
+                            <div class="testimonial-two-client">
+                                <div class="testimonial-two-image">
+                                   {{ image }}<img src="{{ url }}" alt="">{{ /image }}
+                               </div>
+                               <div class="testimonial-two-text">
+                                <h6>{{title}}</h6>
+                                <p>{{position}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {{ /testimonial }}
+                {{ if collections == "testimonial" }}
+                {{ /collection:testimonial }}
+                {{ /if }}
+
+            </div>
+        </div>
+    </div>
+    <div class="testimonial-two-slide-btn">
+        <div class="testimonial-two-prev-btn">
+            <svg class="slider-btn" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.23242" y="12.2646" width="23.5294" height="1.47059" rx="0.735294"
+                fill="#01452C" />
+                <path d="M1.9668 12.9999C3.68248 12.7548 7.62856 10.9411 9.68738 5.64697"
+                stroke="#01452C" stroke-width="1.3" stroke-linecap="round"
+                stroke-linejoin="round" />
+                <path d="M1.9668 12.9998C3.68248 13.2449 7.62856 15.0587 9.68738 20.3528"
+                stroke="#01452C" stroke-width="1.3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="testimonial-two-next-btn">
+            <svg class="slider-btn" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="24.7637" y="13.7354" width="23.5294" height="1.47059" rx="0.735294"
+                transform="rotate(-180 24.7637 13.7354)" fill="#01452C" />
+                <path d="M24.0293 13.0001C22.3136 13.2452 18.3675 15.0589 16.3087 20.353"
+                stroke="#01452C" stroke-width="1.3" stroke-linecap="round"
+                stroke-linejoin="round" />
+                <path d="M24.0293 13.0002C22.3136 12.7551 18.3675 10.9413 16.3087 5.64722"
+                stroke="#01452C" stroke-width="1.3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+</section>
+{{ /if }}
+
+{{ if segment_1 == "home-three" }}
+
+<section class="testimonial-three section">
+    <div class="container">
+        <div class="testimonial-wrapper-three" data-aos="fade-right">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {{ if collections == "testimonial" }}
+                    {{ collection:testimonial as="testimonial" paginate={paginate} limit="{limit}" }}
+                    {{ /if }}
+                    {{ testimonial }}
+                    <div class="swiper-slide">
+                        <!-- testimonial-content -->
+                        <a href="/testimonial" class="testimonial-content">
+                            <div class="testimonial-image">
+                                {{ image }}<img src="{{ url }}" alt="">{{ /image }}
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>{{title}}</h4>
+                                <p>{{position}}</p>
+                                <p>{{ description }}</p>
+                            </div>
+                        </a>
+                    </div>
+                    {{ /testimonial }}
+                    {{ if collections == "testimonial" }}
+                    {{ /collection:testimonial }}
+                    {{ /if }}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ /if }}

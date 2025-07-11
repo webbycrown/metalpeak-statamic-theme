@@ -1,0 +1,53 @@
+title: 'Success Steps Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: success_columns
+    field:
+      type: replicator
+      display: 'Success Columns'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: step_title
+                  field:
+                    type: text
+                    display: 'Step Title'
+                -
+                  handle: step_number
+                  field:
+                    type: text
+                    display: 'Step Number'
+                -
+                  handle: description
+                  field:
+                    type: textarea
+                    display: Description
+  -
+    handle: section_type
+    field:
+      options:
+        -
+          key: detail_page_1
+          value: 'Detail page one'
+        -
+          key: detail_page_2
+          value: 'Detail page two'
+        -
+          key: detail_page_3
+          value: 'Detail page three'
+        -
+          key: detail_page_4
+          value: 'Detail page four'
+      default: detail_page_1
+      type: select
+      display: 'Section Type'

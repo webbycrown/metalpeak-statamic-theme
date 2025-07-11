@@ -1,0 +1,29 @@
+title: 'Recruitment Process Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: recruitment_steps
+    field:
+      type: replicator
+      display: 'Recruitment Steps'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            recruitment_steps:
+              display: 'Recruitment Steps'
+              fields:
+                -
+                  handle: step_title
+                  field:
+                    type: text
+                    display: 'Step Title'
+                -
+                  handle: step_number
+                  field:
+                    type: integer
+                    display: 'Step Number'

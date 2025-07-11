@@ -1,0 +1,46 @@
+ <section class="faq section">
+    <div class="container">
+        <div class="faq-head" data-aos="fade-right">
+            <h2>{{ section_title }}</h2>
+            <p>{{ description }}</p>
+
+        </div>
+        <div class="faq-wrapper">
+            <div class="acc">
+                {{ if collections == "faq" }}
+
+                {{ collection:faq  as="faq" paginate={paginate} limit="{limit}" }}
+
+                {{ /if }}
+                <div class="grid_append">
+                    {{ faq }}
+                    <div class="acc-card grid-item-append" data-aos="fade-left">
+                        <div class="acc-title">{{ title }}</div>
+                        <div class="acc-panel">
+                            {{ answer }}
+                        </div>
+                    </div>
+                    {{ /faq }}
+                </div>
+           
+            {{ paginate }}
+            <!-- our services grid loader -->
+            <input type="hidden" class="lastPage" value="{{ total_pages }}">
+            <input type="hidden" class="currentPage" value="{{ current_page }}">
+               {{ if next_page }} 
+               <div class="load-more-wrap">
+            <div class="load-btn" style="text-align: center;">
+                <a href="{{ next_page }}" class="btn btn-primary ajax-load-more-grid">Load More <img src="{{theme:asset}}assets/images/loader.svg" alt="loader" class="object-cover hidden"></a>
+            </div>
+            </div>
+            {{ /if }}
+            
+            {{ /paginate }}        
+
+            {{ if collections == "faq" }}
+            {{ /collection:faq }}
+            {{ /if }}
+        </div>
+    </div>
+</div>
+</section>

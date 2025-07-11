@@ -1,0 +1,146 @@
+<!-- start-banner -->
+{{ setting }}
+{{ if inner_banner_image }}
+{{ inner_banner_image }}
+<section class="banner section" style="background-image: url('{{ url }}');">
+    {{ /inner_banner_image }}
+    {{ else }}
+    <section class="banner section" style="background-image: url('/images/about-banner.jpg');">
+        {{ /if }}
+        {{ /setting }}
+                <div class="container">
+                    <div class="wc-row">
+                        <div class="wc-column-12">
+                            <div class="banner-wrapper" data-aos="fade-down">
+                                <h1>Services detail</h1>
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/service" class="active">Services detail</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end-banner -->
+
+            <!-- start-services-details-three -->
+            <section class="services-detail-three section">
+                <div class="container">
+                    <div class="wc-row">
+                        <div class="wc-column-12">
+                            <!-- services-detail-three-wrapper -->
+                            <div class="services-detail-three-wrapper">
+                                <div class="services-detail-three-left">
+                                    <!-- image -->
+                                    <div class="services-image-top mw-img-cover" data-aos="fade-right">
+                                        {{ featured_image }}<img src="{{ url }}" alt="" class="img object-cover">{{ /featured_image }}
+                                    </div>
+
+                                     <div class="services-link-wrapper services-link-wrapper-category" data-aos="fade-up">
+                                        <div class="hyperlink">
+                                            {{ hyper_link }}
+                                            <a href="{{ url }}" class="link">
+                                                {{ icon }} {{ if icon ends_with '.svg' }} {{ svg src="{icon}" }} {{ /if }}{{ /icon }}
+                                            </a>
+                                            {{ /hyper_link }}
+                                        <ul>
+                                            {{ category }}
+                                            <li>
+                                                <a href="/service/category/{{slug}}">{{ title }}</a>
+                                            </li>
+                                            {{ /category }}
+                                        </ul>
+                                    </div>
+                                </div>
+                                    <!-- heading -->
+                                    {{ description }}
+
+                                        {{ if type == 'text' }}
+                                            {{ text }}
+                                        {{ /if }}
+
+                                        {{ if type == 'images' }}
+                                        <div class="services-detail-three-image-slider" data-aos="fade-left">
+                                        <!-- Swiper -->
+                                        <div class="swiper mySwiper">
+                                            <div class="swiper-wrapper">
+                                                {{ images }}
+                                                <div class="swiper-slide">
+                                                    <div class="wc-image-slider mw-img-cover">
+                                                        <img src="{{ url }}" alt="" class="img object-cover">
+                                                    </div>
+                                                </div>
+                                                {{ /images }}
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+
+                                        {{ /if }}
+
+                                    {{ /description }}
+
+                                    <!-- services-link-bar -->
+
+                                    <div class="services-link-wrapper" data-aos="fade-up">
+                                        <div class="hyperlink">
+                                           {{ hyper_link }}
+                                            <a href="{{ url }}" class="link">
+                                                {{ icon }} {{ if icon ends_with '.svg' }} {{ svg src="{icon}" }} {{ /if }}{{ /icon }}
+                                            </a>
+                                            {{ /hyper_link }}
+                                        <ul>
+                                            {{ tag }}
+                                            <li>
+                                                <a href="/service?tag={{slug}}">{{ title }}</a>
+                                            </li>
+                                            {{ /tag }}
+                                        </ul>
+                                    </div>
+                                    <div class="wc-social-logo">
+                                        <ul>
+                                            {{ socials }}
+                                            {{ platform }} 
+                                                <li><a href="{{ url }}{{config:app.url}}service/{{ slug }}" target="_blank"><i class="fa-brands fa-{{key}}"></i></a></li>
+                                            {{ /platform }}
+                                            {{ /socials }}
+                                           
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- services-detail-three-right-box -->
+
+                            <div class="services-detail-three-right" data-aos="fade-left">
+                                <div class="all-services">
+                                    <h4>Related Services</h4>
+                                    <div class="all-services-categories">
+                                        {{ related_services }}
+                                        <div class="recent-blog-info">
+                                              {{ image }} {{ if image ends_with '.svg' }} {{ svg src="{image}" }} {{ /if }}{{ /image }}
+                                            <h6><a href="/service/{{slug}}"> {{title}}</a></h6>
+                                        </div>
+                                        {{ /related_services }}
+                                    </div>
+                                </div>
+
+                                <!-- brochures -->
+
+                                <div class="Brochures">
+                                    <h4>{{ brochure_title }}</h4>
+                                    <p>{{ brochure_description }}</p>
+                                    {{ if button_text }}
+                                    <div class="Brochures-btn">
+                                        <a href="{{ theme:asset }}assets/{{ pdf_file }}" class="btn btn-primary" download>{{ button_text }}</a>
+                                    </div>
+                                    {{ /if }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end-services-details-three -->

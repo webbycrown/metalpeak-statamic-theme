@@ -1,0 +1,76 @@
+ <!--apply popup -->
+                <div id="test-form" class="career-apply white-popup-block mfp-hide">
+                 <div class="contact-box" data-aos="fade-left">
+                    <h3>Career Apply Form</h3>
+                    {{ form:career_apply id="contact_form" enctype="multipart/form-data" ajax="true" }}
+                    {{ csrf }}
+
+                    <div class="contact-box-form">
+                        {{ fields }}
+                        {{ if index % 2 == 0 }} <!-- Start new row every 2 fields -->
+                        <div class="form-group">
+                            {{ /if }}
+                            <div>
+
+                                {{ if type == "textarea" }}
+                                <textarea name="{{ handle }}" id="{{ handle }}" class="form-control" placeholder="{{ display }}" ></textarea>
+                                {{ else }}
+                                <input type="{{ type }}" name="{{ handle }}" id="{{ handle }}" class="form-control" placeholder="{{ display }}" >
+                                {{ /if }}
+
+                                <div class="field-error text-danger" style="color: #d92121;" data-error-for="{{ handle }}">{{ error }}</div>
+
+                            </div>
+                            {{ if index % 2 == 1 || last }}
+                        </div>
+                        <!-- Close row after 2nd input or last field -->
+                        {{ /if }}
+                        {{ /fields }}
+
+                        <div class="contact-submit-btn">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        <p class="form-message"></p>
+                    </div>
+                    {{ /form:career_apply }}
+                </div>
+            </div>
+
+            <!-- start-career-opportunities-section -->
+            <section class="career-opporunities section">
+                <div class="container">
+                    <div class="career-opportunities-title" data-aos="fade-down">
+                        <h2>{{ section_title }}</h2>
+                        <p>{{ description }} </p>
+                    </div>
+                    <div class="career-opporunities-wrapper">
+                        {{ opporunities }}
+                        <div class="career-opporunities-box" data-aos="fade-right">
+                            <div class="opporunities-box-title">
+                                <h3>{{ opporunity_title }}</h3>
+                            </div>
+                            <div class="opporunities-content">
+                                <div class="vacancy-info">
+                                    <div class="vacancy-city">
+                                        <span class="vacancy-box">
+                                            <p>{{ vacancy_city }}</p>
+                                        </span>
+                                        <span class="vacancy-box">
+                                            <p>{{ time }}</p>
+                                        </span>
+                                    </div>
+                                    <div class="vacancy-nub">
+                                        <p>{{ vacancy_count }}</p>
+                                    </div>
+                                </div>
+                                <p>{{ vacancy_description }}</p>
+                                <div class="apply-btn">
+                                    <a href="#test-form" class="popup-with-form btn btn-primary">{{ apply_button_text }}</a>
+                                </div>
+                            </div>
+                        </div>
+                        {{ /opporunities }}
+                        
+                    </div>
+                </div>
+            </section>

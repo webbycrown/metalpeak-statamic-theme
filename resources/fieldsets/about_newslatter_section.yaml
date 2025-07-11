@@ -1,0 +1,15 @@
+title: 'About Newslatter Section'
+fields:
+  -
+    handle: image
+    field:
+      max_files: 1
+      min_files: 1
+      container: assets
+      type: assets
+      display: Image
+  -
+    handle: section_heading
+    field:
+      type: text
+      display: 'Section Heading'

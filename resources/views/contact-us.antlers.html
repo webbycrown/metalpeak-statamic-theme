@@ -1,0 +1,9 @@
+    <!-- start inner hero banner section -->
+{{ if show_hero_section == true }}
+  {{ partial:inner-hero-section }}
+{{ /if }}
+    <!-- end inner hero banner section -->
+    {{ page_builder scope="block" }}
+    
+    {{ partial src="page_builder/{type}" }}
+    {{ /page_builder }}

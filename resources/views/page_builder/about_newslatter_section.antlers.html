@@ -1,0 +1,45 @@
+ <section class="about-newslatter section">
+    <div class="container">
+        <div class="wc-row about-newslatter-wrapper">
+            <div class="about-newslatter-image" data-aos="fade-right">
+               {{ image }} <img src="{{ url }}" alt="" class="object-cover">{{ /image }}
+            </div>
+            <div class="contact-box" data-aos="fade-left">
+                <h3>{{ section_heading }}</h3>
+
+                {{ form:contact_form id="contact_form" enctype="multipart/form-data" ajax="true" }}
+                {{ csrf }}
+
+                <div class="contact-box-form">
+                    {{ fields }}
+                    {{ if index % 2 == 0 }} <!-- Start new row every 2 fields -->
+                    <div class="form-group">
+
+                        {{ /if }}
+                        <div>
+
+                        {{ if type == "textarea" }}
+                        <textarea name="{{ handle }}" id="{{ handle }}" class="form-control" placeholder="{{ display }}" ></textarea>
+                        {{ else }}
+                        <input type="{{ type }}" name="{{ handle }}" id="{{ handle }}" class="form-control" placeholder="{{ display }}" >
+                        {{ /if }}
+
+                        <div class="field-error text-danger" style="color: #d92121;" data-error-for="{{ handle }}">{{ error }}</div>
+
+                    </div>
+                        {{ if index % 2 == 1 || last }}
+                    </div>
+                    <!-- Close row after 2nd input or last field -->
+                    {{ /if }}
+                    {{ /fields }}
+
+                    <div class="contact-submit-btn">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    <p class="form-message"></p>
+                </div>
+                {{ /form:contact_form }}
+            </div>
+        </div>
+    </div>
+</section>

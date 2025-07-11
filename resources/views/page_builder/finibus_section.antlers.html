@@ -1,0 +1,79 @@
+{{ if segment_1 == "service-detail" }}  
+
+{{ if section_type == 'without-mystone' }}
+<!-- start-services-detail-one-finibus-one -->
+<section class="services-finibus section services-finibus-one">
+    <div class="container">
+        <div class="wc-row">
+            <div class="wc-column-12">
+                <!-- services-finibus-wrapper -->
+                <div class="services-finibus-wrapper">
+                    <!-- services-finibus-right -->
+                    <div class="services-finibus-right">
+                        <h2 data-aos="fade-down">{{ section_title }}</h2>
+                        <div class="services-finibus-btn" data-aos="fade-up">
+                            <a href="{{ button_url }}" class="btn btn-secondary">{{ button_text }}</a>
+                        </div>
+                        <div class="Finibus-update" data-aos="fade-right">
+                            <a href="{{ video_url }}" class="popup-youtube Finibus-play-btn">
+                               {{ video_play_button_image }} <img src="{{ url }}" alt=""> {{ /video_play_button_image }}
+                            </a>
+                            <div class="Finibus-update-text">
+                                <p>{{ update_text }} {{ phone_number }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   {{ background_image }} <img src="{{ url }}" alt="" class="back-image"> {{ /background_image }}
+</section>
+<!-- end-services-detail-one-finibus-one -->
+{{ /if }}
+{{ /if }}
+
+
+{{ if segment_1 == "service-detail-three"}}
+{{ if section_type == 'with-mystone' }}
+<section class="services-finibus section background-secondary">
+    <div class="container">
+        <div class="wc-row">
+            <div class="wc-column-12">
+                <!-- services-finibus-wrapper -->
+                <div class="services-finibus-wrapper">
+                    <div class="services-finibus-left" data-aos="fade-right">
+                        <!-- finibus-nub -->
+                        {{ finibus_nub }}
+                        <div class="finibus-nub">
+                            <span>{{ number }}</span>
+                            <h4>{{ title }}</h4>
+                            <p>{{ description }}</p>
+                        </div>
+                        {{ /finibus_nub }}
+                        
+                    </div>
+                    <!-- services-finibus-right -->
+                    <div class="services-finibus-right" data-aos="fade-left">
+                        <h2>{{ section_title }}</h2>
+                        <div class="services-finibus-btn">
+                            <a href="{{ button_url }}" class="btn btn-secondary">{{ button_text }}</a>
+                        </div>
+                        <div class="Finibus-update">
+                            <a href="{{video_url}}" class="Finibus-play-btn popup-youtube">
+                                {{video_play_button_image}}<img src="{{ url }}" alt="">{{ /video_play_button_image }}
+                            </a>
+                            <div class="Finibus-update-text">
+                                <p>{{ update_text }} <a href="tel:{{ phone_number }}">{{ phone_number }}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ background_image }} <img src="{{ url }}" alt="" class="back-image"> {{ /background_image }}
+</section>
+
+{{ /if }}
+{{ /if }}

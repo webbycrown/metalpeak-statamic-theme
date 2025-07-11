@@ -1,0 +1,33 @@
+{{ if get:slug }}
+
+{{ collection:blogs }}
+
+	{{ if slug == get:slug }}
+		{{ if segment_1 == 'blog-detail' }}
+			{{ partial:blog-detail-one slug="{get:slug}" }}
+		{{ elseif segment_1 == 'blog-detail-two' }}
+			{{ partial:blog-detail-two slug="{get:slug}" }}
+		{{ elseif segment_1 == 'blog-detail-three' }}
+			{{ partial:blog-detail-three slug="{get:slug}" }}
+		{{ else }}
+			{{ partial:blog-detail-four slug="{get:slug}" }}
+		{{ /if }}
+	{{ /if }}
+
+{{ /collection:blogs }}
+
+{{ else }}
+
+	{{ page_setting }}
+		{{ if blog_single_page == 'blog-detail-one' }}
+			{{ partial:blog-detail-one slug="{segment_2}" }}
+		{{ elseif blog_single_page == 'service-detail-two' }}
+			{{ partial:blog-detail-two slug="{segment_2}" }}
+		{{ elseif blog_single_page == 'service-detail-three' }}
+			{{ partial:blog-detail-three slug="{segment_2}" }}
+		{{ else }}
+			{{ partial:blog-details-four slug="{segment_2}" }}
+		{{ /if }}
+	{{ /page_setting }}
+ 
+{{ /if }}

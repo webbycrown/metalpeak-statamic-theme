@@ -1,0 +1,174 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: address
+            field:
+              type: textarea
+              display: Address
+              validate:
+                - required
+          -
+            handle: address_line
+            field:
+              type: text
+              display: 'Address Line'
+              validate:
+                - required
+          -
+            handle: phone_number
+            field:
+              type: grid
+              display: 'Phone Number'
+              fields:
+                -
+                  handle: number
+                  field:
+                    type: text
+                    display: Number
+                    validate:
+                      - required
+          -
+            handle: email_address
+            field:
+              type: grid
+              display: 'Email Address'
+              fields:
+                -
+                  handle: email
+                  field:
+                    type: text
+                    display: Email
+                    validate:
+                      - required
+                      - email
+          -
+            handle: our_links
+            field:
+              type: grid
+              display: 'Our Links'
+              fields:
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: Label
+                    validate:
+                      - required
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Url
+          -
+            handle: support
+            field:
+              type: grid
+              display: Support
+              fields:
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: Label
+                    validate:
+                      - required
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Url
+                    validate:
+                      - required
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+              validate:
+                - required
+          -
+            handle: copyright
+            field:
+              type: textarea
+              display: Copyright
+          -
+            handle: socials
+            field:
+              type: grid
+              display: Socials
+              fields:
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Url
+                -
+                  handle: icon
+                  field:
+                    options:
+                      -
+                        key: facebook-f
+                        value: Facebook
+                      -
+                        key: youtube
+                        value: Youtube
+                      -
+                        key: twitter
+                        value: Twitter
+                      -
+                        key: instagram
+                        value: Instagram
+                      -
+                        key: linkedin-in
+                        value: Linkedin
+                      -
+                        key: github
+                        value: Github
+                      -
+                        key: whatsapp
+                        value: Whatsapp
+                      -
+                        key: pinterest-p
+                        value: Pinterest
+                      -
+                        key: telegram-plane
+                        value: Telegram
+                      -
+                        key: reddit-alien
+                        value: 'Reddit Alien'
+                    type: select
+                    display: Icon
+          -
+            handle: subscribe_title
+            field:
+              default: 'Subscribe our Newslatter'
+              type: text
+              display: 'Subscribe Title'
+          -
+            handle: photo_gallery
+            field:
+              max_files: 6
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Photo Gallery'
+          -
+            handle: footer_links
+            field:
+              type: grid
+              display: 'Footer Links'
+              fields:
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: Label
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Url

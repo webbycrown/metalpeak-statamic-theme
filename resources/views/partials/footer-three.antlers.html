@@ -1,0 +1,93 @@
+ <section class="footer-three background-primary newslatter" data-aos="fade-up">
+            <div class="container">
+                <div class="wc-row footer-three-title">
+                    <div class="wc-column-6">
+                        <!-- footer-three-logo -->
+                        <a href="/">
+
+                            <div class="footer-three-logo">
+                                {{ setting }}{{ logo_white }}<img src="{{url}}" alt="">{{ /logo_white }}{{ /setting }}
+                            </div>
+                        </a>
+                    </div>
+                    <div class="wc-column-6">
+                        <!-- footer-three-paragraph -->
+                        <div class="footer-three-para">
+                            <p>{{ footer }}{{ description }}{{ /footer }}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer-three-menu -->
+                <div class="wc-row footer-three-menu">
+                    <div class="col-12">
+                        <ul>
+                            {{ footer }}
+                            {{ our_links }}
+                            <li><a href="{{ url }}">{{ label }}</a></li>
+                            {{ /our_links }}
+                            {{ /footer }}
+                        </ul>
+                    </div>
+                </div>
+                <!-- footer-three-social-info -->
+                <div class="wc-row footer-three-social">
+                    <div class="wc-column-12">
+                        {{ footer }}
+                        <ul>
+                            <li><a target="_blank" href="{{ address_like }}">
+                                <span><i class="fa-solid fa-location-dot"></i></span>
+                                <p>{{ address }}</p>
+                                </a></li>
+                                <li>
+                                    {{ if phone_number }}
+                                    <a href="{{ phone_number }} {{ if index == 0 }} {{ number }} {{/if }} {{ /phone_number }}">
+                                        <span><i class="fa-solid fa-phone"></i></span> 
+                                        <div class="footer-three-nub">
+                                        {{ phone_number }}
+                                            <p>{{ number }}</p>
+                                        {{ /phone_number }}
+                                        
+                                        </div>
+                                    </a>
+                                    {{ /if }}
+
+                                    </li>
+                                <li>
+                                    {{ email_address }}<a href="mailto:{{ email }}"><span><i class="fa-solid fa-envelope"></i></span>
+                                    <p>{{ email }}</p>
+                                </a>
+                            {{ /email_address }}
+                        </li>
+                            </ul>
+                            {{ /footer }}
+                        </div>
+                    </div>
+                    <!-- footer-three-copy-section -->
+                    <div class="wc-row footer-three-copy newslatter-wrapper">
+                        <div class="wc-column-6">
+                            <form class="newslatter-input get-free-quote-form">
+                                <input type="email" placeholder="Enter your email" name="email" id="email" >
+                                <!-- send-btn -->
+                                <div class="send-btn">
+                                    <div class="send-btn">
+                                        <button class="mail-btn" type="submit">
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                            d="M25.8746 1.77719C25.7582 1.6638 25.5863 1.62871 25.4349 1.68761L0.264714 11.4629C0.115113 11.521 0.0124842 11.6601 0.00105843 11.8201C-0.0103673 11.9801 0.0714411 12.1324 0.211191 12.2111L5.42738 15.1501L7.23778 23.9992C7.24905 24.0617 7.27449 24.12 7.311 24.17C7.31466 24.175 7.31766 24.1789 7.3207 24.1827C7.38449 24.2625 7.47493 24.3182 7.58035 24.3351C7.5938 24.3372 7.60731 24.3387 7.62072 24.3396C7.6294 24.3401 7.63804 24.3404 7.64667 24.3404C7.72584 24.3404 7.80084 24.3178 7.86477 24.278C7.88641 24.2646 7.90697 24.2491 7.92607 24.2316C7.93201 24.2261 7.93719 24.2211 7.94221 24.216L11.8688 20.2795C12.0306 20.1172 12.0302 19.8545 11.868 19.6927C11.7056 19.5308 11.4431 19.5312 11.2812 19.6934L8.19683 22.7857L8.86328 17.0782L18.2829 22.2484C18.3778 22.3002 18.4832 22.3114 18.5798 22.2881C18.5904 22.2855 18.6001 22.2827 18.6097 22.2796C18.7051 22.2487 18.7888 22.1843 18.842 22.0919C18.8447 22.0871 18.8471 22.0828 18.8494 22.0785C18.8602 22.058 18.8688 22.0379 18.8757 22.0174L25.9756 2.21437C26.0304 2.06141 25.991 1.89048 25.8746 1.77719ZM1.38286 11.9188L21.9559 3.92889L5.78107 14.3969L1.38286 11.9188ZM8.2631 16.0943C8.2243 16.1254 8.19053 16.1641 8.16413 16.2094C8.16068 16.2153 8.15742 16.2213 8.15428 16.2274C8.12909 16.2761 8.11446 16.3275 8.10964 16.379L7.53414 21.3077L6.25917 15.0759L20.2293 6.03473L8.2631 16.0943ZM18.2562 21.2871L9.25349 16.3457L24.676 3.38061L18.2562 21.2871Z"
+                                            fill="#1C1C1C" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="form-message" data-success-color="#ffbc68" style="display:none;"></p>
+                        </form>
+                    </div>
+                    <div class="wc-column-6">
+                        <div class="copy-text">
+                           {{ footer }}<p>{{ copyright }} </p>{{ /footer }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>

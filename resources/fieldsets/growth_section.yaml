@@ -1,0 +1,68 @@
+title: 'Growth Section'
+fields:
+  -
+    handle: images
+    field:
+      min_files: 1
+      container: assets
+      type: assets
+      display: Images
+  -
+    handle: button
+    field:
+      type: grid
+      display: Button
+      fields:
+        -
+          handle: button_text
+          field:
+            type: text
+            display: 'Button Text'
+        -
+          handle: button_link
+          field:
+            type: text
+            display: 'Button Link'
+  -
+    handle: description
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: Description
+      sets:
+        bullet_points:
+          display: 'Bullet Points'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: bullet_points
+                  field:
+                    type: grid
+                    display: 'Bullet Points'
+                    fields:
+                      -
+                        handle: point
+                        field:
+                          type: text
+                          display: Point
+  -
+    handle: section_type
+    field:
+      options:
+        -
+          key: detail_page_1
+          value: 'Detail page one'
+        -
+          key: detail_page_2
+          value: 'Detail page two'
+        -
+          key: detail_page_3
+          value: 'Detail page three'
+        -
+          key: detail_page_4
+          value: 'Detail page four'
+      default: detail_page_1
+      type: select
+      display: 'Section Type'

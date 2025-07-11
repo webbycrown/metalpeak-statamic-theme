@@ -1,0 +1,42 @@
+title: 'Service Skill Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: skill_boxes
+    field:
+      type: replicator
+      display: 'Skill Boxes'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: icon
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    type: assets
+                    display: Icon
+                -
+                  handle: skill_name
+                  field:
+                    type: text
+                    display: 'Skill Name'
+                -
+                  handle: description
+                  field:
+                    type: textarea
+                    display: Description
+                -
+                  handle: number
+                  field:
+                    type: text
+                    display: Number

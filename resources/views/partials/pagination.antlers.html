@@ -1,0 +1,53 @@
+<div class="pagination-part">
+
+    <ul class="pagination">
+        {{ if prev_page }}
+        <li class="page-item"><a class="page-link" href="{{ prev_page }}">&laquo;</a></li>
+        {{ else }}
+        <li class="page-item hidden"><a  class="page-link" href="javascript:;">&laquo;</a></li>
+        {{ /if }}
+
+        {{ links:segments }}
+
+        {{ first }}
+        {{ if page == current_page }}
+        <li class="active page-item"><a class="page-link {{ if page == current_page }}active{{ /if }}" href="javascript:;">{{ page }}</a></li>
+        {{ else }}
+        <li class="page-item"><a class="page-link" href="{{ url }}">{{ page }}</a></li>
+        {{ /if }}
+        {{ /first }}
+
+        {{ if slider }}
+        <li class="hidden"><a  class="page-link" href="javascript:;">...</a></li>
+        {{ /if }}
+
+        {{ slider }}
+        {{ if page == current_page }}
+        <li class="active page-item"><a  class="page-link {{ if page == current_page }}active{{ /if }}" href="javascript:;">{{ page }}</a></li>
+        {{ else }}
+        <li class="page-item"><a class="page-link" href="{{ url }}">{{ page }}</a></li>
+        {{ /if }}
+        {{ /slider }}
+
+        {{ if slider || (!slider && last) }}
+        <li class="hidden"><a  class="page-link" href="javascript:;">...</a></li>
+        {{ /if }}
+
+        {{ last }}
+        {{ if page == current_page }}
+        <li class="active page-item"><a  class="page-link {{ if page == current_page }}active{{ /if }}" href="javascript:;">{{ page }}</a></li>
+        {{ else }}
+        <li class="page-item"><a class="page-link" href="{{ url }}">{{ page }}</a></li>
+        {{ /if }}
+        {{ /last }}
+
+        {{ /links:segments }}
+
+        {{ if next_page }}
+        <li class="page-item"><a class="page-link" href="{{ next_page }}">&raquo;</a></li>
+        {{ else }}
+        <li class="hidden page-item"><a  class="page-link" href="javascript:;">&raquo;</a></li>
+        {{ /if }}
+    </ul>
+
+</div>

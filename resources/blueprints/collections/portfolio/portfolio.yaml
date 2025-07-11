@@ -1,0 +1,147 @@
+title: Portfolio
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: thumb_image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Thumb Image'
+          -
+            handle: featured_image
+            field:
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Featured Image'
+          -
+            handle: short_description
+            field:
+              type: textarea
+              display: 'Short Description'
+          -
+            handle: client
+            field:
+              type: text
+              display: Client
+          -
+            handle: project_date
+            field:
+              type: text
+              display: 'Project Date'
+              input_type: date
+          -
+            handle: category
+            field:
+              mode: select
+              taxonomies:
+                - portfolio_categories
+              type: terms
+              display: Category
+          -
+            handle: social_links
+            field:
+              type: grid
+              display: 'Social Links'
+              fields:
+                -
+                  handle: platform
+                  field:
+                    type: select
+                    display: Platform
+                    options:
+                      -
+                        key: facebook-f
+                        value: Facebook
+                      -
+                        key: youtube
+                        value: Youtube
+                      -
+                        key: twitter
+                        value: Twitter
+                      -
+                        key: instagram
+                        value: Instagram
+                      -
+                        key: linkedin-in
+                        value: Linkedin
+                      -
+                        key: github
+                        value: Github
+                      -
+                        key: whatsapp
+                        value: Whatsapp
+                      -
+                        key: pinterest-p
+                        value: Pinterest
+                      -
+                        key: telegram-plane
+                        value: Telegram
+                      -
+                        key: reddit-alien
+                        value: 'Reddit Alien'
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: Url
+          -
+            handle: description
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Description
+              sets:
+                images:
+                  display: Images
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: images
+                          field:
+                            min_files: 1
+                            container: assets
+                            type: assets
+                            display: Images
+          -
+            handle: related_portfolio
+            field:
+              mode: select
+              collections:
+                - portfolio
+              type: entries
+              display: 'Related Portfolio'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+  seo_section:
+    display: 'Seo Section'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: seo_section

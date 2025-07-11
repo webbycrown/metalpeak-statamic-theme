@@ -1,0 +1,38 @@
+{{ if segment_1 == "service-detail" }}  
+{{ if section_type == 'detail_page_1' }} 
+<!-- start-service-detail-one-Denounce-->
+<section class="denounce faq section">
+    <div class="container">
+        <div class="wc-row">
+            <div class="wc-column-12">
+                <div class="denounce-wrapper">
+                    <div class="denounce-left-content" data-aos="fade-right">
+                        <h3>{{ heading_title }}</h3>
+                        <div class="denounce-image">
+                            {{ image }}<img src="{{ url }}" alt="">{{ /image }}
+                           <p> {{ image_description }}</p>
+                        </div>
+                    </div>
+                    <div class="denounce-right-content" data-aos="fade-left">
+                        <div class="faq-wrapper">
+                            <div class="acc">
+                                {{ faqs }}
+                                <div class="acc-card">
+                                    <div class="acc-title">{{ question }}
+                                    </div>
+                                    <div class="acc-panel">
+                                        {{ answer }}
+                                    </div>
+                                </div>
+                                {{ /faqs }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end-service-detail-one-Denounce-->
+{{ /if }}
+{{ /if }}

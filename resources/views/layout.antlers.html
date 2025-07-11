@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="javascript">
+{{ partial:header-link }}
+
+
+<body class="js">
+
+    <!-- start-loader -->
+    <div class="loader background-secondary" style="display: block;">
+        <div class="loader-text">
+            <h3>LOADING...</h3>
+        </div>
+    </div>
+    <!-- end-loader -->
+
+    <!-- start-loader-two -->
+    <div class="loader-two background-secondary" style="display: none;">
+        <div class="loader-image">
+            {{ setting }}{{ logo }}<img src="{{ url }}" alt="" class="object-cover">{{ /logo }}{{ /setting }}
+        </div>
+    </div>
+    <!-- end-loader-two -->
+
+    <!-- start-header -->
+    {{ if setting:header == "header-one" }}
+    {{ partial:header }}
+    {{ elseif setting:header == "header-two" }}
+    {{ partial:header-two }}
+    {{ else }}
+    {{ partial:header-three }}
+    {{ /if }}
+    <!-- end-header -->
+
+    <div class="wc-main-body">
+
+        <div class="content">
+            {{ template_content }}
+        </div>
+    </div>
+
+    <!-- start-footer -->
+
+    {{ if setting:footer == 'footer-one' }}
+    {{ partial:footer }}
+    {{ elseif setting:footer == 'footer-two' }}
+    {{ partial:footer-two }}
+    {{ else }}
+    {{ partial:footer-three }}
+    {{ /if }}
+<!-- end-footer -->
+
+
+
+<!--------------- <===== all-js =====> ------------------>
+
+    {{ partial:footer-link }}
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+title: 'Denounce Section'
+fields:
+  -
+    handle: heading_title
+    field:
+      type: text
+      display: 'Heading Title'
+  -
+    handle: image
+    field:
+      min_files: 1
+      container: assets
+      type: assets
+      display: Image
+  -
+    handle: image_description
+    field:
+      type: textarea
+      display: 'Image Description'
+  -
+    handle: faqs
+    field:
+      type: replicator
+      display: FAQs
+      sortable: false
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: question
+                  field:
+                    type: text
+                    display: Question
+                -
+                  handle: answer
+                  field:
+                    type: textarea
+                    display: Answer
+  -
+    handle: section_type
+    field:
+      options:
+        -
+          key: detail_page_1
+          value: 'Detail page one'
+        -
+          key: detail_page_2
+          value: 'Detail page two'
+        -
+          key: detail_page_3
+          value: 'Detail page three'
+        -
+          key: detail_page_4
+          value: 'Detail page four'
+      default: detail_page_1
+      type: select
+      display: 'Section Type'

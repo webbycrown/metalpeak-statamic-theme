@@ -1,0 +1,229 @@
+{{ if segment_1 == "service" }}
+<!-- start-services-two -->
+<section class="services-two section services-page-one">
+    <div class="container">
+        <!-- services-wrap -->
+        {{ if collections == "services" }}
+
+        {{  collection:services tag:contains="{ get:tag }" title:contains="{ get:s }" slug:contains="{ get:s }"  as="services" paginate={paginate} limit="{limit}" }}
+
+        {{ /if }}
+        <div class="wc-row services-two-wrapper grid_append">
+            {{ services }}
+            
+            <a href="/service/{{slug}}" class="grid-item-append" data-aos="fade-down">
+                <div class="services-two-content background-secondary">
+                    <div class="services-icon">
+                        {{ image }} {{ if image ends_with '.svg' }} {{ svg src="{image}" }} {{ /if }}{{ /image }}
+                    </div>
+                    <h4>{{ title }}</h4>
+                    <p>{{ short_description }}</p>
+                </div>
+            </a>
+
+            {{ /services }}
+        </div>
+
+        {{ paginate }}
+        <!-- our services grid loader -->
+        <input type="hidden" class="lastPage" value="{{ total_pages }}">
+        <input type="hidden" class="currentPage" value="{{ current_page }}">
+        {{ if next_page }} 
+        <div class="load-more-wrap">
+            <div class="load-btn" style="text-align: center;">
+                <a href="{{ next_page }}" class="btn btn-primary ajax-load-more-grid">Load More <img src="{{theme:asset}}assets/images/loader.svg" alt="loader" class="object-cover hidden"></a>
+            </div>
+        </div>
+        {{ /if }}
+
+        {{ /paginate }}  
+        {{ if collections == "services" }}
+        {{ /collection:services }}
+        {{ /if }}
+    </div>
+    
+</section>
+<!-- end-services-two -->
+{{ /if }}
+
+{{ if segment_1 == "service-two" }}
+    
+    <section class="about-services our-services section services-page-two">
+        <div class="container">
+            <!-- our-services-wrapper -->
+            {{ if collections == "services" }}
+
+            {{ collection:services  as="services" paginate={paginate} limit="{limit}" }}
+
+            {{ /if }}
+            <div class="wc-row our-services-wrapper grid_append">
+                {{ services }}
+                <a href="/service/{{slug}}" data-aos="fade-down" class="grid-item-append">
+                    <div class="our-services-content background-secondary">
+                        <!-- icon -->
+                        <div class="our-services-icon">
+                            {{ image }} {{ if image ends_with '.svg' }} {{ svg src="{image}" }} {{ /if }}{{ /image }}
+                        </div>
+                        <h4>{{ title }}</h4>
+                        <p>{{ short_description }}</p>
+                    </div>
+                </a>
+                {{ /services }}
+            </div>
+            {{ paginate }}
+            <!-- our services grid loader -->
+            <input type="hidden" class="lastPage" value="{{ total_pages }}">
+            <input type="hidden" class="currentPage" value="{{ current_page }}">
+            {{ if next_page }} 
+            <div class="load-more-wrap">
+                <div class="load-btn" style="text-align: center;">
+                    <a href="{{ next_page }}" class="btn btn-primary ajax-load-more-grid">Load More <img src="{{theme:asset}}assets/images/loader.svg" alt="loader" class="object-cover hidden"></a>
+                </div>
+            </div>
+            {{ /if }}
+
+            {{ /paginate }}  
+            {{ if collections == "services" }}
+            {{ /collection:services }}
+            {{ /if }}
+        </div>
+    </section>
+
+{{ /if }}
+
+
+{{ if segment_1 == "about" }}
+    
+<section class="about-services our-services section">
+    <div class="container">
+        <!-- our-services-wrapper -->
+        <div class="wc-row our-services-wrapper" data-aos="fade-up">
+            {{ if collections == "services" }}
+
+            {{ collection:services  as="services" paginate={paginate} limit="{limit}" }}
+
+            {{ /if }}
+            {{ services }}
+            <div class="wc-column-4">
+                <a href="/service/{{slug}}" class="our-services-content background-secondary">
+                    <!-- icon -->
+                    <div class="our-services-icon">
+                        {{ image }} {{ if image ends_with '.svg' }} {{ svg src="{image}" }} {{ /if }}{{ /image }}
+                    </div>
+                    <h4>{{ title }}</h4>
+                    <p>{{ short_description }}</p>
+                </a>
+            </div>
+            {{ /services }}
+            {{ if collections == "services" }}
+            {{ /collection:services }}
+            {{ /if }}
+            
+        </div>
+    </div>
+</section>
+
+{{ /if }}
+
+
+{{ if is_homepage }}
+   
+   <!-- start-Our-Services-section -->
+            <section class="our-services section background-secondary">
+                <div class="container">
+                    <!-- title -->
+                    <div class="our-services-title" data-aos="fade-down">
+                        <h2 class="mw-sub-title">{{ section_name }}</h2>
+                    </div>
+                    <!-- our-services-wrapper -->
+                    <div class="wc-row our-services-wrapper" data-aos="fade-up">
+                        {{ if collections == "services" }}
+                            {{ collection:services  as="services" paginate={paginate} limit="{limit}" }}
+                        {{ /if }}
+                        {{ services }}
+                        <div class="wc-column-4">
+                            <a href="/service/{{slug}}" class="our-services-content">
+                                <!-- icon -->
+                                <div class="our-services-icon">
+                                    {{ image }} {{ if image ends_with '.svg' }} {{ svg src="{image}" }} {{ /if }}{{ /image }}
+                                </div>
+                                <h4>{{title}}</h4>
+                                <p>{{short_description}}</p>
+                            </a>
+                        </div>
+                        {{ /services }}
+                        {{ if collections == "services" }}
+                            {{ /collection:services }}
+                        {{ /if }}
+                    </div>
+                </div>
+            </section>
+            <!-- end-Our-Services-section --> 
+
+{{ /if }}
+
+{{ if segment_1 == 'home-two' }}
+
+<section class="services-two section ">
+    <div class="container">
+        <!-- services-head -->
+        <div class="services-two-title" data-aos="fade-down">
+            <h2 class="mw-sub-title">{{ section_title }}</h2>
+        </div>
+        <!-- services-wrap -->
+        <div class="services-two-wrapper" data-aos="fade-up">
+           {{ if collections == "services" }}
+           {{ collection:services  as="services" paginate={paginate} limit="{limit}" }}
+           {{ /if }}
+           {{ services }}
+            <a href="/service/{{slug}}" class="services-two-content background-secondary">
+                <div class="services-icon">
+                   {{ image }} {{ if image ends_with '.svg' }} {{ svg src="{image}" }} {{ /if }}{{ /image }}
+                </div>
+                <h4>{{title}}</h4>
+                <p>{{short_description}}</p>
+            </a>
+            {{ /services }}
+            {{ if collections == "services" }}
+            {{ /collection:services }}
+            {{ /if }}
+        </div>
+    </div>
+</section>
+
+{{ /if }}
+
+{{ if segment_1 == 'home-three' }}
+<section class="our-services our-services-three section">
+    <div class="container">
+        <!-- title -->
+        <div class="our-services-title" data-aos="fade-down">
+            <h2 class="mw-sub-title">{{ section_title }}</h2>
+        </div>
+        <!-- our-services-wrapper -->
+        <div class="wc-row our-services-wrapper" data-aos="fade-up">
+            {{ if collections == "services" }}
+            {{ collection:services  as="services" paginate={paginate} limit="{limit}" }}
+            {{ /if }}
+            {{ services }}
+            <div class="wc-column-4">
+                <a href="/service/{{slug}}" class="our-services-content">
+                    <!-- icon -->
+                    <div class="our-services-icon">
+                        {{ image }} {{ if image ends_with '.svg' }} {{ svg src="{image}" }} {{ /if }}{{ /image }}
+                    </div>
+                    <h4>{{title}}</h4>
+                    <p>{{short_description}}</p>
+                </a>
+            </div>
+
+            {{ /services }}
+            {{ if collections == "services" }}
+            {{ /collection:services }}
+            {{ /if }}
+
+           
+        </div>
+    </div>
+</section>
+{{ /if }}

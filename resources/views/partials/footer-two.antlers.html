@@ -1,0 +1,93 @@
+<footer class="footer footer-two  background-secondary" data-aos="fade-up">
+            <div class="container">
+                <div class="footer-row wc-footer">
+                    <!-- footer-logo -->
+                    <div class="footer-col wc-footer-logo">
+                        <a href="/">{{ setting }}{{ logo }}<img src="{{url}}" alt="">{{ /logo }}{{ /setting }}</a>
+                        <p>{{ footer }}{{ description }}{{ /footer }}</p>
+                        <div class="wc-social-logo">
+                            <ul>
+                                {{ footer }}
+                                {{ socials }}
+                                {{ icon }}
+
+                                <li><a target="_blank" href="{{ url }}"><i class="fa-brands fa-{{ key }}"></i></a> </li>
+                                {{ /icon }}
+                                {{ /socials }}
+                                {{ /footer }}
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- footer-official -->
+                    <div class="footer-col wc-footer-menu wc-footer-official">
+                        <h4>Official info</h4>
+                        {{ footer }}
+                        <div class="menu  contact-menu">
+                            <ul>
+                                <li><a target="_blank" href="{{ address_like }}"><span><i class="fa-solid fa-location-dot"></i></span>
+                                    <p>{{ address }}</p>
+                                </a></li>
+                                <li>
+                                    <a href="tel:{{ phone_number }} {{ if index == 0 }} {{ number }} {{/if }} {{ /phone_number }}"><span><i class="fa-solid fa-phone"></i></span>
+                                    <div class="contact-call">
+                                    {{ phone_number }}
+
+                                        <p>{{ number }}</p>
+                            
+                                    {{ /phone_number }}
+                                    </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    {{ email_address }}
+                                    <a href="mailto:{{ email }}"><span><i class="fa-solid fa-envelope"></i></span>
+                                        <p>{{email}}</p>
+                                    </a>
+                                    {{ /email_address }}
+                                </li>
+                            </ul>
+                        </div>
+                        {{ /footer }}
+                    </div>
+                    <!-- footer-menu -->
+                    <div class="footer-col wc-footer-menu wc-footer-link">
+                        <h4>Our Links</h4>
+                        <div class="menu">
+                            <ul>{{ footer }}
+                                {{ our_links }}
+                                <li><a href="{{ url }}">{{ label }}</a></li>
+                                {{ /our_links }}
+                                {{ /footer }}
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- footer-gallery -->
+                    <div class="footer-col wc-footer-image">
+                        <h4>Photo Gallery</h4>
+                        <div class="wc-footer-image-grid">
+                            {{ footer }}
+                            {{ photo_gallery }}
+                            <a href="javascript:;" class="wc-image">
+                                <img src="{{url}}" alt="">
+                            </a>
+                            {{ /photo_gallery }}
+                            {{ /footer }}
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- copy -->
+                <div class="copy-row wc-copy">
+                    <div class="copy-col wc-copy-text">
+                       {{ footer }}<p>{{ copyright }} </p>{{ /footer }}
+                    </div>
+                    <div class="copy-col footer-two-terms">
+                       {{ footer }}
+                       {{ footer_links }}
+                       <a href="{{ url }}">{{ label }}</a>{{ if not last }} | {{ /if }}
+                       {{ /footer_links }}
+                       {{ /footer }}
+                    </div>
+                </div>
+            </div>
+        </footer>

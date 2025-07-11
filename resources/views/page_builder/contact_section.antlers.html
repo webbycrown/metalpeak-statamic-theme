@@ -1,0 +1,114 @@
+<section class="contact-us section">
+					<div class="container">
+						<!-- help-wrapper -->
+						<div class="wc-row help-wrapper">
+							<div class="wc-column-6">
+								<!-- help-content -->
+								<div class="help-content" data-aos="fade-right">
+									<h2>{{section_title}}</h2>
+									<p>{{ description }}
+								</div>
+							</div>
+							<div class="wc-column-6">
+								<!-- contact-box -->
+								<div class="contact-box" data-aos="fade-left">
+									<h3>{{ form_title }}</h3>
+
+									{{ form:contact_form id="contact_form" enctype="multipart/form-data" ajax="true" }}
+									{{ csrf }}
+
+									<div class="contact-box-form">
+										{{ fields }}
+										{{ if index % 2 == 0 }} <!-- Start new row every 2 fields -->
+										<div class="form-group">
+											{{ /if }}
+											<div>
+
+											{{ if type == "textarea" }}
+											<textarea name="{{ handle }}" id="{{ handle }}" class="form-control" placeholder="{{ display }}" ></textarea>
+											{{ else }}
+											<input type="{{ type }}" name="{{ handle }}" id="{{ handle }}" class="form-control" placeholder="{{ display }}" >
+											{{ /if }}
+
+											<div class="field-error text-danger" style="color: #d92121;" data-error-for="{{ handle }}">{{ error }}</div>
+
+											</div>
+
+
+											{{ if index % 2 == 1 || last }}
+										</div>
+										<!-- Close row after 2nd input or last field -->
+										{{ /if }}
+										{{ /fields }}
+
+										<div class="contact-submit-btn">
+											<button type="submit" class="btn btn-primary">Submit</button>
+										</div>
+										<p class="form-message"></p>
+									</div>
+									{{ /form:contact_form }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end-contact-us-section -->
+
+
+				<!-- start-contact-information -->
+				<section class="contact-information background-secondary section">
+					<div class="container">
+						<!-- information-wrapper -->
+						<div class="wc-row information-wrapper" data-aos="fade-up">
+						{{ contact_info }}
+							
+							{{ if title == 'Phone number' }}
+							<div class="wc-column-4">
+								<!-- information-box -->
+								<div class="information-box">
+									<div class="information-icon">
+										<i class="fa-solid fa-phone"></i>
+									</div>
+									<h4>{{ title }}</h4>
+									{{ lines }}<a href="{{ line | replace:' ' }}">{{ line }}</a>{{ /lines }}
+								</div>
+							</div>
+								{{ /if }}
+							{{ if title == 'Email Address' }}
+							<div class="wc-column-4">
+								<!-- information-box -->
+								<div class="information-box">
+									<div class="information-icon">
+										<i class="fa-solid fa-envelope"></i>
+									</div>
+									<h4>{{ title }}</h4>
+									{{ lines }}<a href="mailto:{{ line | trim }}">{{ line }}</a>{{ /lines }}
+								</div>
+							</div>
+							{{ /if }}
+							{{ if title == 'Map Location' }}
+							<div class="wc-column-4">
+								<!-- information-box -->
+								<div class="information-box">
+									<div class="information-icon">
+										<i class="fa-solid fa-location-dot"></i>
+									</div>
+									<h4>{{ title }}</h4>
+									{{ lines }}<a href="javascript:;">{{ line }}</a>{{ /lines }}
+								</div>
+							</div>
+							{{ /if }}
+						{{ /contact_info }}
+							
+						</div>
+					</div>
+				</section>
+				<!-- end-contact-information -->
+
+				<!-- start-google-map -->
+				<div class="contact-map">
+					<iframe
+					src="{{ google_map_iframe }}"
+					width="100%" height="490" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>

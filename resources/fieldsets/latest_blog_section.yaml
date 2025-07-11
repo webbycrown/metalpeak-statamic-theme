@@ -1,0 +1,49 @@
+title: 'Latest Blog Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: section_description
+    field:
+      type: textarea
+      display: 'Section Description'
+  -
+    handle: collections
+    field:
+      max_items: 1
+      mode: select
+      type: collections
+      display: Collections
+  -
+    handle: paginate
+    field:
+      type: text
+      display: Paginate
+  -
+    handle: limit
+    field:
+      type: integer
+      display: Limit
+  -
+    handle: read_more_button_text
+    field:
+      type: text
+      display: 'Read More Button Text'
+  -
+    handle: read_more_button_url
+    field:
+      type: text
+      display: 'Read More Button URL'
+  -
+    handle: header_read_more_button_text
+    field:
+      type: text
+      display: 'Header Read More Button Text'
+  -
+    handle: header_read_more_button_url
+    field:
+      type: text
+      display: 'Header Read More Button URL'

@@ -1,0 +1,273 @@
+{{ if segment_1 == "team" }}
+ <section class="team-page team  section">
+    <div class="container">
+        <!-- team-head-wrapper -->
+        <div class="wc-row team-head-wrapper">
+            <div class="wc-column-12">
+                <!-- title -->
+                <div class="team-head-title" data-aos="fade-right">
+                    <h2 class="mw-sub-title">{{ section_title }}</h2>
+                    <p>{{ section_description }}</p>
+                </div>
+            </div>
+        </div>
+        {{ if collections == "teams" }}
+
+        {{ collection:teams  as="teams" paginate={paginate} limit="{limit}" }}
+
+        {{ /if }}
+        <div class="wc-team-image-wrapper   team-image-wrapper-page" data-aos="fade-left">
+            <div class="grid_append">
+                {{ teams }}
+                <!-- team-image -->
+                <div class="team-image  grid-item-append">
+                    <a href="#test-form" class="image popup-with-form team-popup-link" data-slug="{{ slug }}" data-type="popup">
+                        {{ image }}<img src="{{ url }}" alt="{{title}}">{{ /image }}
+                    </a>
+                    <div class="image-content">
+                        <p>{{ position }}</p>
+                        <a href="/team/{{slug}}">{{ title }}</a>
+                        <div class="social-info">
+                            {{ socials }}
+                            {{icon}}<a target="_blank" href="{{url}}{{config:app.url}}team/{{ slug }}"><i class="fa-brands fa-{{key}}"></i></a>{{/icon}}
+                            {{ /socials }}
+                        </div>
+                    </div>
+                </div>
+                {{ /teams }}
+            </div>
+
+            {{ paginate }}
+            <!-- our services grid loader -->
+            <input type="hidden" class="lastPage" value="{{ total_pages }}">
+            <input type="hidden" class="currentPage" value="{{ current_page }}">
+            {{ if next_page }} 
+            <div class="load-more-wrap">
+                <div class="load-btn" style="text-align: center;">
+                    <a href="{{ next_page }}" class="btn btn-primary ajax-load-more-grid">Load More <img src="{{theme:asset}}assets/images/loader.svg" alt="loader" class="object-cover hidden"></a>
+                </div>
+            </div>
+            {{ /if }}
+
+            {{ /paginate }}  
+        </div>
+        {{ if collections == "teams" }}
+        {{ /collection:teams }}
+        {{ /if }}
+    </div>
+</section>
+{{ /if }}
+
+{{ if segment_1 == "about" }}
+    
+<section class="team team-two background-secondary section">
+    <div class="container">
+        <!-- title -->
+        <div class="team-head-title" data-aos="fade-down">
+            <h2 class="mw-sub-title">{{ section_title }} </h2>
+            <p>{{ section_description }}</p>
+        </div>
+        <div class="wc-row wc-team-image-wrapper" data-aos="fade-up">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {{ if collections == "teams" }}
+
+                    {{ collection:teams  as="teams" paginate={paginate} limit="{limit}" }}
+
+                    {{ /if }}
+                    {{ teams }}
+                    <div class="swiper-slide">
+                        <!-- team-image -->
+                        <div class="team-image">
+                            <a href="/team/{{slug}}" class="image">
+                                {{ image }}<img src="{{ url }}" alt="{{title}}">{{ /image }}
+                            </a>
+                            <div class="image-content">
+                                <p>{{ position }}</p>
+                                <a href="/team/{{slug}}">{{ title }}</a>
+                                <div class="social-info">
+                                    {{ socials }}
+                                    {{icon}}<a target="_blank" href="{{url}}{{config:app.url}}team/{{ slug }}"><i class="fa-brands fa-{{key}}"></i></a>{{/icon}}
+                                    {{ /socials }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{ /teams }}
+                    {{ if collections == "teams" }}
+                    {{ /collection:teams }}
+                    {{ /if }}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ /if }}
+
+{{ if is_homepage }}
+
+  <!-- start-team-section -->
+            <section class="team section">
+                <div class="container">
+                    <!-- team-head-wrapper -->
+                    <div class="wc-row team-head-wrapper">
+                        <div class="wc-column-6">
+                            <!-- title -->
+                            <div class="team-head-title" data-aos="fade-right">
+                                <h2 class="mw-sub-title">{{ section_title }}</h2>
+                                <p>{{ section_description }}</p>
+                            </div>
+                        </div>
+                        <div class="wc-column-6">
+                            <!-- explore-btn -->
+                            {{ if button_text }}
+                            <div class="team-btn" data-aos="fade-left">
+                                <a href="{{ button_url }}" class="btn btn-primary">{{ button_text }}</a>
+                            </div>
+                            {{ /if }}
+                        </div>
+                    </div>
+                    <div class="wc-row wc-team-image-wrapper" data-aos="fade-up">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                {{ if collections == "teams" }}
+
+                                {{ collection:teams  as="teams" paginate={paginate} limit="{limit}" }}
+
+                                {{ /if }}
+                                {{ teams }}
+                                <div class="swiper-slide">
+                                    <!-- team-image -->
+                                    <div class="team-image">
+                                        <a href="/team/{{slug}}" class="image">
+                                            {{ image }}<img src="{{ url }}" alt="{{title}}">{{ /image }}
+                                        </a>
+                                        <div class="image-content">
+                                            <p>{{ position }}</p>
+                                            <a href="/team/{{slug}}">{{ title }}</a>
+                                            <div class="social-info">
+                                               {{ socials }}
+                                               {{icon}}<a target="_blank" href="{{url}}{{config:app.url}}team/{{ slug }}"><i class="fa-brands fa-{{key}}"></i></a>{{/icon}}
+                                               {{ /socials }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{ /teams }}
+                                {{ if collections == "teams" }}
+                                {{ /collection:teams }}
+                                {{ /if }}
+                                
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- endt-team-section -->
+
+{{ /if }}
+
+{{ if segment_1 == "home-two" }}
+
+<section class="team team-two background-secondary section">
+    <div class="container">
+        <!-- title -->
+        <div class="team-head-title" data-aos="fade-down">
+            <h2 class="mw-sub-title">{{ section_title }} </h2>
+            <p>{{ section_description }}</p>
+        </div>
+        <div class="wc-row wc-team-image-wrapper" data-aos="fade-up">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {{ if collections == "teams" }}
+                    {{ collection:teams  as="teams" paginate={paginate} limit="{limit}" }}
+                    {{ /if }}
+                    {{ teams }}
+                    <div class="swiper-slide">
+                        <!-- team-image -->
+                        <div class="team-image">
+                            <a href="/team/{{slug}}" class="image">
+                                {{ image }}<img src="{{ url }}" alt="{{title}}">{{ /image }}
+                            </a>
+                            <div class="image-content">
+                                <p>{{position}}</p>
+                                <a href="/team/{{slug}}">{{title}}</a>
+                                <div class="social-info">
+                                    {{ socials }}
+                                    {{icon}}<a target="_blank" href="{{url}}{{config:app.url}}team/{{ slug }}"><i class="fa-brands fa-{{key}}"></i></a>{{/icon}}
+                                    {{ /socials }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{ /teams }}
+                    {{ if collections == "teams" }}
+                    {{ /collection:teams }}
+                    {{ /if }}
+                    
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ /if }}
+
+
+{{ if segment_1 == 'home-three' }}
+
+<section class="team-three section">
+    <div class="container">
+        <!-- team-three-title -->
+        <div class="team-three-title" data-aos="fade-down">
+            <h2 class="mw-sub-title">{{ section_title }}</h2>
+        </div>
+        <div class="wc-row team-three-wrapper" data-aos="fade-up">
+            {{ if collections == "teams" }}
+            {{ collection:teams  as="teams" paginate={paginate} limit="{limit}" }}
+            {{ /if }}
+            {{ teams }}
+            <div class="wc-column-6">
+                <div class="team-three-content">
+                    <!-- team-three-image -->
+                    <a href="/team/{{slug}}" class="team-three-image">
+                        {{ image }}<img src="{{ url }}" alt="{{title}}">{{ /image }}
+                    </a>
+                    <!-- team-three-information -->
+                    <div class="team-three-info">
+                        <p>{{position}}</p>
+                        <a href="javascript:;">{{title}}</a>
+                        <div class="wc-social-logo">
+                            <ul>
+                                {{ socials }}
+                                <li>{{icon}}<a target="_blank" href="{{url}}{{config:app.url}}team/{{ slug }}"><i class="fa-brands fa-{{key}}"></i></a>{{/icon}}</li>
+                                {{ /socials }}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ /teams }}
+            {{ if collections == "teams" }}
+            {{ /collection:teams }}
+            {{ /if }}
+        </div>
+
+        {{ if button_text }}
+        <div class="team-three-btn" data-aos="fade-up">
+            <a href="{{ button_url }}" class="btn btn-primary">{{ button_text }}</a>
+        </div>
+        {{ /if }}
+    </div>
+</section>
+
+{{ /if }}

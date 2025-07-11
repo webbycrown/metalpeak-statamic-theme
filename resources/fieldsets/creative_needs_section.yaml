@@ -1,0 +1,35 @@
+title: 'Creative Needs Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: section_description
+    field:
+      type: textarea
+      display: 'Section Description'
+  -
+    handle: button_text
+    field:
+      type: text
+      display: 'Button Text'
+  -
+    handle: button_url
+    field:
+      type: text
+      display: 'Button URL'
+  -
+    handle: image
+    field:
+      max_files: 1
+      min_files: 1
+      container: assets
+      type: assets
+      display: Image
+  -
+    handle: video_link
+    field:
+      type: text
+      display: 'Video Link URL'

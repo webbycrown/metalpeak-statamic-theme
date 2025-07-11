@@ -1,0 +1,50 @@
+title: 'Counter Three Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: video_image
+    field:
+      max_files: 1
+      min_files: 1
+      container: assets
+      type: assets
+      display: 'Video Preview Image'
+  -
+    handle: video_url
+    field:
+      type: text
+      display: 'Video URL'
+  -
+    handle: play_button_image
+    field:
+      max_files: 1
+      min_files: 1
+      container: assets
+      type: assets
+      display: 'Play Button Image'
+  -
+    handle: stat_items
+    field:
+      type: replicator
+      display: 'Stat Items'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: count_number
+                  field:
+                    type: integer
+                    display: 'Count Number'
+                -
+                  handle: count_label
+                  field:
+                    type: text
+                    display: 'Count Label'

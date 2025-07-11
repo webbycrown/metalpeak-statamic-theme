@@ -1,0 +1,33 @@
+{{ if get:slug }}
+
+{{ collection:services }}
+
+	{{ if slug == get:slug }}
+		{{ if segment_1 == 'service-detail' }}
+			{{ partial:services-details-one slug="{get:slug}" }}
+		{{ elseif segment_1 == 'service-detail-two' }}
+			{{ partial:services-details-two slug="{get:slug}" }}
+		{{ elseif segment_1 == 'service-detail-three' }}
+			{{ partial:services-details-three slug="{get:slug}" }}
+		{{ else }}
+			{{ partial:services-details-four slug="{get:slug}" }}
+		{{ /if }}
+	{{ /if }}
+
+{{ /collection:services }}
+
+{{ else }}
+
+	{{ page_setting }}
+		{{ if service_single_page == 'service-detail-one' }}
+			{{ partial:services-details-one slug="{segment_2}" }}
+		{{ elseif service_single_page == 'service-detail-two' }}
+			{{ partial:services-details-two slug="{segment_2}" }}
+		{{ elseif service_single_page == 'service-detail-three' }}
+			{{ partial:services-details-three slug="{segment_2}" }}
+		{{ else }}
+			{{ partial:services-details-four slug="{segment_2}" }}
+		{{ /if }}
+	{{ /page_setting }}
+ 
+{{ /if }}

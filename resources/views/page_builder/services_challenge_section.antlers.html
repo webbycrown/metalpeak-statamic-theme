@@ -1,0 +1,58 @@
+{{ if segment_1 == "service-detail-three"}}
+ <section class="services-challenge section">
+    <div class="container">
+        <div class="wc-row">
+            <div class="wc-column-12">
+                <!-- services-challenge-head -->
+                <div class="services-challenge-head">
+                   {{ description }}
+                </div>
+                <!-- services-challenge-wrapper -->
+                <div class="services-challenge-wrapper">
+                    <!-- challenge-image -->
+                    <div class="challenge-image" data-aos="fade-left">
+                        {{ images }}
+                        {{ if index == 0 }}
+                        <img src="{{ url }}" alt="">
+                        {{ elseif index == 1 }}
+                        <div class="image-inner">
+                            <img src="{{ url }}" alt="">
+                        </div>
+                        {{ else }}
+                        <img src="{{ url }}" alt="">
+                        {{ /if }}
+                        {{ /images }}
+                    </div>
+                    <!-- services-challenge-working-section -->
+                    <div class="services-challenge-working" data-aos="fade-right">
+                        {{ working_description }}
+                        {{ if type == 'text' }}
+                        {{ text }}
+                        {{ /if }}
+                        {{ if type == 'working_list' }}
+                        <div class="working-list">
+                            <ul>
+                                {{ working_list }}
+                                <li>{{ point }}</li>
+                                {{ /working_list }}
+                            </ul>
+                        </div>
+                        {{ /if }}
+                        {{ /working_description }}
+
+                       
+                        {{ button }}
+                        {{ if button_text }}
+                        <div class="Working-btn">
+                            <a href="{{ button_link }}" class="btn btn-primary">{{ button_text }}</a>
+                        </div>
+                        {{ /if }}
+                        {{ /button }}
+                    </div>
+                </div>
+                <p>{{ footer_description }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{{ /if }}

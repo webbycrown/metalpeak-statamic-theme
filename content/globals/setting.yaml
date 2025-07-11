@@ -1,0 +1,8 @@
+title: Setting
+data:
+  favicon: images/fevicon.png
+  logo: images/logo.png
+  logo_white: images/footer.png
+  inner_banner_image: images/about-banner.jpg
+  footer: footer-three
+  header: header-one

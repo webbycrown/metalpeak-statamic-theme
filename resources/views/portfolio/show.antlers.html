@@ -1,0 +1,17 @@
+{{ if get:slug }}
+
+{{ collection:portfolio }}
+
+{{ if slug == get:slug }}
+{{ partial:portfolio-detail slug="{get:slug}" }}
+{{ /if }}
+
+{{ /collection:portfolio }}
+
+{{ else }}
+
+ 
+{{ partial:portfolio-detail slug="{segment_2}" }}
+
+
+{{ /if }}

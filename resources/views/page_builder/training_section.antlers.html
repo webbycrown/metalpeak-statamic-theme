@@ -1,0 +1,159 @@
+  <!-- start-training-section -->
+  {{ if is_homepage }}
+            <section class="training section">
+                <div class="container">
+                    <!-- traning-wrapper -->
+                    <div class="wc-row training-wrapper">
+                        <div class="wc-column-6">
+                            <!-- trainig-image -->
+                            <div class="training-image" data-aos="fade-right">
+                                {{ training_images }}<img src="{{ url }}" class="mw-image" alt="">{{ /training_images }}
+                            </div>
+                        </div>
+                        <div class="wc-column-6">
+                            <!-- training-content -->
+                            <div class="training-content" data-aos="fade-left">
+                                <h2 class="mw-sub-title ">{{ section_title }}</h2>
+                                {{ if description }}
+                                {{ description }}
+                                {{ if type == "text" }}
+                                <div class="text">
+                                    {{ text }}
+                                </div>
+                                {{ /if }}
+                                {{ /description }}
+                                {{ /if }}
+                                <!-- training-achive-wrapper -->
+                                <div id="counter" class="wc-row training-achiev-wrapper">
+                                    {{ stat_boxes }}
+                                    <div class="wc-column-4 training-col">
+                                        <!-- training-achive -->
+                                        <div class="training-achiev advices">
+                                           {{ icon limit="1" }} <img src="{{ url }}" alt="">{{ /icon }}
+                                            <h3 class="count plus" data-count="{{ training_count }}">{{ training_count }}</h3>
+                                            <p>{{ training_label }}</p>
+                                        </div>
+                                    </div>
+                                    {{ /stat_boxes }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {{ /if }}
+
+            {{ if segment_1 == 'home-two' }}
+
+            <section class="training training-two section ">
+                <div class="container">
+                    <!-- traning-wrapper -->
+                    <div class="wc-row training-wrapper">
+                        <div class="wc-column-6">
+                            <!-- trainig-image -->
+                            <div class="training-image mw-img-cover" data-aos="fade-right">
+                               {{ training_images }} <img src="{{ url }}" class="mw-image img" alt="">{{ /training_images }}
+                            </div>
+                        </div>
+                        <div class="wc-column-6">
+                            
+                            <!-- training-content -->
+                            <div class="training-content" data-aos="fade-left">
+                                <h2 class="mw-sub-title">{{ section_title }}</h2>
+                                {{ if description }}
+                                {{ description }}
+                                {{ if type == "text" }}
+                                <div class="text">
+                                    {{ text }}
+                                </div>
+                                {{ /if }}
+                                {{ /description }}
+                                {{ /if }}
+                                <!-- training-achive-wrapper -->
+                                {{ if button_text }}
+                                <div class="training-two-btn">
+                                    <a href="{{ button_url }}" class="btn btn-primary">{{ button_text }}</a>
+                                </div>
+                                {{ /if }}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- trining-count -->
+                    <div id="counter" class="wc-row training-two-count-wrapper" data-aos="fade-up">
+                         {{ stat_boxes }}
+                        <div class="wc-column-3">
+                            <div class="wc-count">
+                                <h2 class="count plus" data-count="{{ training_count }}">{{ training_count }}</h2>
+                                <p>{{ training_label }}</p>
+                            </div>
+                        </div>
+                        {{ /stat_boxes }}
+                    </div>
+                </div>
+            </section>
+
+            {{ /if }}
+
+            {{ if segment_1 == 'home-three' }}
+
+             <section class="training training-two training-three">
+                    <div class="container">
+                        <!-- traning-wrapper -->
+                        <div class="wc-row training-wrapper">
+                            <div class="wc-column-6">
+                                <!-- trainig-image -->
+                                <div class="training-three-wrapper" data-aos="fade-right">
+                                    <div class="training-inner-img">
+                                        {{ training_images }}
+                                        {{ if index == 0 || index == 1 }}
+                                        <div class="training-image1">
+                                            <img src="{{ url }}" class="mw-image" alt="">
+                                        </div>
+                                        {{ /if }}
+                                        {{ /training_images }}
+                                    </div>
+                                    <div class="training-inner-img">
+                                        {{ training_images }}
+                                        {{ if index == 2 }}
+                                        <div class="training-image2">
+                                            <img src="{{ url }}" class="mw-image" alt="">
+                                        </div>
+                                        {{ /if }}
+                                        {{ /training_images }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wc-column-6">
+                                <!-- training-content -->
+                                <div class="training-content" data-aos="fade-left">
+                                    <h2 class="mw-sub-title">{{ section_title }}</h2>
+                                    {{ if description }}
+                                    {{ description }}
+                                    {{ if type == "text" }}
+                                    <div class="text">
+                                        {{ text }}
+                                    </div>
+                                    {{ /if }}
+                                    {{ if type == 'new_set' }}
+                                    <ul class="training-content-list">
+                                        {{ new_set }}
+                                        <li><p>{{ list }}</p></li>
+                                        {{ /new_set }}
+                                    </ul>
+                                    {{ /if }}
+                                    {{ /description }}
+                                    {{ /if }}
+                                    <!-- training-achive-wrapper -->
+                                    {{ if button_text }}
+                                    <div class="training-two-btn">
+                                        <a href="{{ button_url }}" class="btn btn-primary">{{ button_text }}</a>
+                                    </div>
+                                    {{ /if }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            {{ /if }}
+            <!-- end-training-section -->

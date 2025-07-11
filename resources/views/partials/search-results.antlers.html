@@ -1,0 +1,59 @@
+{{ if blog or services or testimonial }}
+
+    {{ if blog }}
+    <section>
+        <h6>Recent Searched Blogs:</h6>
+        <ul id="blog-list">
+            {{ blog limit="5" }}
+            <li>
+                <div class="img-cover"> {{ thumb_image }}<img src="{{ url }}" alt="logo" width="50%" height="50%">{{ /thumb_image }}</div>
+                <a href="{{ url }}">{{ title }}</a></li>
+            {{ /blog }}
+        </ul>
+
+        {{ if blog }}
+        <div class="search_view_btn"><a href="/blog?s=" class="toggle-view-btn btn btn-primary" data-type="blog" data-query="{{ query }}">View All</a></div>
+        {{ /if }}
+    
+    </section>
+    {{ /if }}
+
+    {{ if services }}
+    <section>
+        <h6>Recent Services:</h6>
+        <ul id="services-list">
+            {{ services limit="5" }}
+            <li><div class="img-cover"> {{ image }} {{ if image ends_with '.svg' }} {{ svg src="{image}" }} {{ /if }}{{ /image }}</div>
+                <a href="{{ url }}">{{ title }}</a></li>
+            {{ /services }}
+        </ul>
+
+        {{ if services}}
+        <div class="search_view_btn"><a href="/service?s=" class="toggle-view-btn btn btn-primary" data-type="service" data-query="{{ query }}">View All</a></div>
+        {{ /if }}
+    
+    </section>
+    {{ /if }}
+
+
+    {{ if testimonial }}
+    <section>
+        <h6>Recent Testimonial:</h6>
+        <ul id="our_services-list">
+            {{ testimonial limit="5" }}
+            <li><div class="img-cover"> {{ image }}<img src="{{ url }}" alt="logo" width="50%" height="50%">{{ /image }}</div>
+                <a href="/testimonial">{{ title }}</a></li>
+            {{ /testimonial }}
+        </ul>
+
+         {{ if testimonial }}
+        <div class="search_view_btn"><a href="/testimonial?s=" class="toggle-view-btn btn btn-primary" data-type="testimonial" data-query="{{ query }}">View All</a></div>
+         {{ /if }}
+        
+    
+     </section>
+     {{ /if }}
+
+{{ else }}
+<p>No Data Found.</p>
+{{ /if }}

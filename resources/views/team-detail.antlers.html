@@ -1,0 +1,132 @@
+
+<!-- start-banner -->
+{{ setting }}
+{{ if inner_banner_image }}
+{{ inner_banner_image }}
+<section class="banner section" style="background-image: url('{{ url }}');">
+    {{ /inner_banner_image }}
+    {{ else }}
+    <section class="banner section" style="background-image: url('/images/about-banner.jpg');">
+        {{ /if }}
+        {{ /setting }}
+    <div class="container">
+        <div class="wc-row">
+            <div class="wc-column-12">
+                <div class="banner-wrapper" data-aos="fade-down">
+                    <h1>Team detail</h1>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/team" class="active">Team detail</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end-banner -->
+
+<!-- start-team-detail -->
+<section class="team-detail section">
+    <div class="container">
+        <div class="wc-row team-detail-wrapper">
+            <div class="wc-column-12">
+                <div class="team-info">
+                    <!-- team-member-image -->
+                    <div class="team-info-image" data-aos="fade-right">
+                     {{ image }}}<img src="{{ url }}" alt="" class="object-cover">{{ /image }}
+                 </div>
+                 <!-- membar-info -->
+                 <div class="team-info-content" data-aos="fade-left">
+                    <h2>{{ title }}</h2>
+                    <p>{{ position }}</p>
+                    <p>{{ bio }}</p>
+                    <div class="team-personal-info">
+                        <ul>
+                            <li><a href="mailto:{{ emails }}{{ if index == 0 }}{{ email }}{{/if}}{{ emails }}">
+                                <span><i class="fa-solid fa-envelope"></i></span>
+                                {{ emails }}
+                                <p>{{ email }}</p>
+                                {{ /emails }}
+                            </a></li>
+                            <li>
+                                <a href="tel:{{ phone_numbers }}{{ if index == 0 }}{{ number }}{{ /if }}{{ /phone_numbers }}">
+                                    <span><i class="fa-solid fa-phone"></i></span>
+                                    <div class="team-personal-info-nub">
+                                        {{ phone_numbers }}
+                                        <p>{{ number }}</p>
+                                        {{ /phone_numbers }}
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="{{ address_link }}">
+                                <span><i class="fa-solid fa-location-dot"></i></span>
+                                <p>{{ address }}</p>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- team-membar-info-detail -->
+            <div class="team-info-content">
+                <h2>I Am {{ title }}</h2>
+                <p>{{ intro }}</p>
+                <!-- education -->
+                <div class="team-info-education" data-aos="fade-left">
+                    <div class="team-info-interest">
+                        <h4>Interests</h4>
+                        <ul>
+                            {{ interests }}
+                            <li>{{ value }}</li>
+                            {{ /interests }}
+                        </ul>
+                    </div>
+                    <div class="education">
+                        <h4>Education</h4>
+                        <ul>
+                            {{ education }}
+                            <li>      {{degree }}
+                                <p>{{ university }}</p>
+                            </li>
+                            {{ /education }}
+
+                        </ul>
+                    </div>
+                    <div class="team-info-skill-image">
+                        {{skill_image}}<img src="{{ url }}" alt="" class="object-cover">{{ /skill_image }}
+                    </div>
+                </div>
+            </div>
+            <!-- skill -->
+            <div class="team-info-skill">
+                {{ long_description }}
+                {{ if type == 'text' }}
+                {{ text }}
+                {{ /if }}
+
+                {{ if type == "new_set" }}
+                <div class="progressbar-wrapper">
+                    <div class="progressbar" data-aos="fade-right">
+                        {{ skill_levels }}
+                        <div class="progressbar-title">
+                            <h4>{{ skill }}</h4>
+                        </div>
+                        <div class="progress">
+                            <div class="bar {{ skill | lower }}">
+                                <h6>{{ percentage }}%</h6>
+                            </div>
+                        </div>
+                        {{ /skill_levels }}
+
+                    </div>
+                </div>
+                {{ /if }}
+
+                {{ /long_description }}
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+                <!-- end-team-detail -->

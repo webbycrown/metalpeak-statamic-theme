@@ -1,0 +1,158 @@
+{{ if is_homepage }}
+<section class="blog section">
+    <div class="container">
+        <div class="wc-row blog-head-wrapper">
+            <div class="wc-column-6">
+                <!-- title -->
+                <div class="blog-head-title" data-aos="fade-right">
+                    <h2 class="mw-sub-title">{{ section_title }}</h2>
+                    <p>{{ section_description }}</p>
+                </div>
+            </div>
+            <div class="wc-column-6">
+                <!-- blog-btn -->
+                {{ if header_read_more_button_text }}
+                <div class="blog-btn" data-aos="fade-left">
+                    <a href="{{ header_read_more_button_url }}" class="btn btn-primary">{{ header_read_more_button_text }}</a>
+                </div>
+                {{ /if }}
+            </div>
+        </div>
+        <div class="wc-row blog-wrapper" data-aos="fade-up">
+            {{ if collections == "blogs" }}
+
+            {{ collection:blogs as="blogs" sort="updated_at:desc" paginate={paginate} limit="{limit}" }}
+
+            {{ /if }}   
+            {{ blogs }}
+            <div class="wc-column-4">
+                <!-- blog-content -->
+                <div class="blog-content">
+                    <div class="blog-image mw-img-cover">
+                        <a href="/blog/{{slug}}">
+                            {{ thumb_image }}<img src="{{ url }}" alt="" class="img">{{ /thumb_image }}
+                        </a>
+                        <div class="blog-date">
+                            <p>{{ updated_at format="M j, Y" }}</p>
+                        </div>
+                    </div>
+                    <a href="/blog/{{slug}}"><h4>{{ title }}</h4></a>
+                    <p>{{ short_description }}</p>
+                    {{ if read_more_button_text }}
+                    <div class="blog-read-btn">
+                        <a href="{{ read_more_button_url }}/{{slug}}" class="btn btn-primary">{{ read_more_button_text }}</a>
+                    </div>
+                    {{ /if }}
+                </div>
+            </div>
+            {{ /blogs }}
+            {{ if collections == "blogs" }}
+            {{ /collection:blogs }}
+            {{ /if }}
+
+        </div>
+    </div>
+</section>
+{{ /if }}
+
+{{ if segment_1 == "home-two" }}
+
+<section class="blog blog-two section">
+    <div class="container">
+        <div class="wc-row blog-head-wrapper">
+            <div class="wc-column-6">
+                <!-- title -->
+                <div class="blog-head-title" data-aos="fade-right">
+                    <h2 class="mw-sub-title">{{section_title}}</h2>
+                    <p>{{section_description}}</p>
+                </div>
+            </div>
+            {{ if header_read_more_button_text }}
+            <div class="blog-btn" data-aos="fade-left">
+                <a href="{{ header_read_more_button_url }}" class="btn btn-primary">{{ header_read_more_button_text }}</a>
+            </div>
+            {{ /if }}
+        </div>
+        <div class="blog-two-wrapper" data-aos="fade-up">
+            {{ if collections == "blogs" }}
+            {{ collection:blogs as="blogs" sort="updated_at:desc" paginate={paginate} limit="{limit}" }}
+            {{ /if }}   
+            {{ blogs }}
+            <div class="{{ if index == 0 }}blog-content{{ elseif index == 1 }}blog-right-inner blog-right-up{{ else }}blog-right-inner{{ /if }}">
+                <div class="blog-content-image">
+                    <a href="/blog/{{slug}}">
+                        {{ thumb_image }}<img src="{{ url }}" alt="">{{ /thumb_image }}s
+                    </a>
+                    <div class="blog-date">
+                        <p>{{ updated_at format="M j, Y" }}</p>
+                    </div>
+                </div>
+                <div class="blog-two-text">
+                <a href="/blog/{{slug}}"><h4>{{title}}</h4></a>
+                <p>{{ short_description }}</p>
+                {{ if read_more_button_text }}
+                <div class="blog-read-btn">
+                    <a href="{{ read_more_button_url }}/{{slug}}" class="btn btn-primary">{{ read_more_button_text }}</a>
+                </div>
+                {{ /if }}
+            </div>
+            </div>
+            {{ /blogs }}
+            {{ if collections == "blogs" }}
+            {{ /collection:blogs }}
+            {{ /if }}
+        </div>
+    </div>
+</section>
+
+{{ /if }}
+
+
+{{ if segment_1 == 'home-three' }}
+
+<section class="blog blog-three background-primary section">
+    <div class="container">
+        <!-- blog-title -->
+        <div class="blog-three-title" data-aos="fade-down">
+            <h2 class="mw-sub-title">{{ section_title }}</h2>
+        </div>
+        <div class="wc-row blog-wrapper" data-aos="fade-up">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {{ if collections == "blogs" }}
+                    {{ collection:blogs as="blogs" sort="updated_at:desc" paginate={paginate} limit="{limit}" }}
+                    {{ /if }}   
+                    {{ blogs }}
+                    <div class="swiper-slide">
+                        <!-- blog-content -->
+                        <div class="blog-content">
+                            <div class="blog-image">
+                                <a href="/blog/{{slug}}">
+                                     {{ thumb_image }}<img src="{{ url }}" alt="">{{ /thumb_image }}
+                                </a>
+                                <div class="blog-date">
+                                    <p>{{ updated_at format="M j, Y" }}</p>
+                                </div>
+                            </div>
+                            <a href="/blog/{{slug}}"><h4>{{title}}</h4></a>
+                            <p>{{short_description}}</p>
+                            {{ if read_more_button_text }}
+                            <div class="blog-read-btn">
+                                <a href="{{ read_more_button_url }}/{{slug}}" class="btn btn-primary">{{ read_more_button_text }}</a>
+                            </div>
+                            {{ /if }}
+                        </div>
+                    </div>
+                    {{ /blogs }}
+                    {{ if collections == "blogs" }}
+                    {{ /collection:blogs }}
+                    {{ /if }}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ /if }}

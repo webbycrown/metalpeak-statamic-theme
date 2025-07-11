@@ -1,0 +1,168 @@
+title: 'all page builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      collapse: true
+      type: replicator
+      display: 'Page Builder'
+      replicator_preview: false
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            seo_section:
+              display: 'Seo Section'
+              fields:
+                -
+                  import: seo_section
+            contact_section:
+              display: 'Contact Section'
+              fields:
+                -
+                  import: contact_section
+            faq_section:
+              display: 'FAQ Section'
+              fields:
+                -
+                  import: faq_section
+            team_section:
+              display: 'Team Section'
+              fields:
+                -
+                  import: team_section
+            career_opporunities_section:
+              display: 'Career Opporunities Section'
+              fields:
+                -
+                  import: career_opporunities_section
+            career_job_section:
+              display: 'Career Job Section'
+              fields:
+                -
+                  import: career_job_section
+            success_steps_section:
+              display: 'Success Steps Section'
+              fields:
+                -
+                  import: success_steps_section
+            recruitment_process_section:
+              display: 'Recruitment Process Section'
+              fields:
+                -
+                  import: recruitment_process_section
+            career_newslatter_section:
+              display: 'Career Newslatter Section'
+              fields:
+                -
+                  import: career_newslatter_section
+            portfolio_section:
+              display: 'Portfolio Section'
+              fields:
+                -
+                  import: portfolio_section
+            services_section:
+              display: 'Services Section'
+              fields:
+                -
+                  import: services_section
+            service_skill_section:
+              display: 'Service Skill Section'
+              fields:
+                -
+                  import: service_skill_section
+            purpose_section:
+              display: 'Purpose Section'
+              fields:
+                -
+                  import: purpose_section
+            growth_section:
+              display: 'Growth Section'
+              fields:
+                -
+                  import: growth_section
+            finibus_section:
+              display: 'Finibus Section'
+              fields:
+                -
+                  import: finibus_section
+            denounce_section:
+              display: 'Denounce Section'
+              fields:
+                -
+                  import: denounce_section
+            purpose_and_support_blocks:
+              display: 'Purpose and Support Blocks'
+              fields:
+                -
+                  import: purpose_and_support_blocks
+            services_challenge_section:
+              display: 'Services Challenge Section'
+              fields:
+                -
+                  import: services_challenge_section
+            about_taskflow_section:
+              display: 'About Taskflow Section'
+              fields:
+                -
+                  import: about_taskflow_section
+            about_count_section:
+              display: 'About Count Section'
+              fields:
+                -
+                  import: about_count_section
+            testimonial_section:
+              display: 'Testimonial Section'
+              fields:
+                -
+                  import: testimonial_section
+            about_newslatter_section:
+              display: 'About Newslatter Section'
+              fields:
+                -
+                  import: about_newslatter_section
+            blog_section:
+              display: 'Blog Section'
+              fields:
+                -
+                  import: blog_section
+            hero_section:
+              display: 'Hero Section'
+              fields:
+                -
+                  import: hero_section
+            partner_section:
+              display: 'Partner Section'
+              fields:
+                -
+                  import: partner_section
+            creative_needs_section:
+              display: 'Creative Needs Section'
+              fields:
+                -
+                  import: creative_needs_section
+            training_section:
+              display: 'Training Section'
+              fields:
+                -
+                  import: training_section
+            portfolio_steps_section:
+              display: 'Portfolio Steps Section'
+              fields:
+                -
+                  import: portfolio_steps_section
+            latest_blog_section:
+              display: 'Latest Blog Section'
+              fields:
+                -
+                  import: latest_blog_section
+            testimonial_quote_section:
+              display: 'Testimonial Quote Section'
+              fields:
+                -
+                  import: testimonial_quote_section
+            counter_three_section:
+              display: 'Counter Three Section'
+              fields:
+                -
+                  import: counter_three_section

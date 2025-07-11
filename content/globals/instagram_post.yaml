@@ -1,0 +1,11 @@
+title: 'Instagram Post'
+data:
+  section_title: 'Instagram Post'
+  images:
+    - images/insta1.png
+    - images/insta2.png
+    - images/insta3.png
+    - images/insta4.png
+    - images/insta5.png
+    - images/insta6.png
+  url: 'javascript:;'

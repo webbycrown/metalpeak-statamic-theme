@@ -1,0 +1,39 @@
+{{ setting }}
+{{ if inner_banner_image }}
+{{ inner_banner_image }}
+<section class="banner section" style="background-image: url('{{ url }}');">
+{{ /inner_banner_image }}
+{{ else }}
+<section class="banner section" style="background-image: url('/images/about-banner.jpg');">
+{{ /if }}
+{{ /setting }}
+<div class="container">
+    <div class="wc-row">
+        <div class="wc-column-12">
+            <div class="banner-wrapper">
+                <h1>404 Error</h1>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="javascript:;" class="active">404 Error</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- end-banner -->
+
+<!-- start-error-section -->
+<section class="error section">
+    <div class="container">
+        <div class="error-content">
+            <div class="error-image">
+                <img src="{{ theme:asset }}assets/images/404 Error-cuate 1.png" alt="" class="object-cover">
+            </div>
+            <h2>Oops! Page Not Found!</h2>
+            <p>404, error error message code that means the we you were trying to reach couldn't be found on
+            the server.</p>
+            <a href="/" class="btn btn-primary">Back To Home</a>
+        </div>
+    </div>
+</section>

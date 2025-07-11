@@ -1,0 +1,26 @@
+title: 'Seo Section'
+fields:
+  -
+    handle: seo_title
+    field:
+      type: text
+      display: 'Seo Title'
+      validate:
+        - required
+  -
+    handle: seo_description
+    field:
+      type: textarea
+      display: 'Seo Description'
+      validate:
+        - required
+  -
+    handle: seo_image
+    field:
+      max_files: 1
+      min_files: 1
+      container: assets
+      type: assets
+      display: 'Seo Image'
+      validate:
+        - required

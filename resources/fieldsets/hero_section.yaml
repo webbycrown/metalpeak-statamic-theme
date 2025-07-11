@@ -1,0 +1,51 @@
+title: 'Hero Section'
+fields:
+  -
+    handle: slides
+    field:
+      type: replicator
+      display: Slides
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            slide:
+              display: Slide
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: description
+                  field:
+                    type: textarea
+                    display: Description
+                -
+                  handle: button_text
+                  field:
+                    type: text
+                    display: 'Button Text'
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: 'Button URL'
+                -
+                  handle: left_images
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Left Side Images'
+                -
+                  handle: right_image
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Right Side Image'
+                -
+                  handle: image_text
+                  field:
+                    type: text
+                    display: 'Image Text'

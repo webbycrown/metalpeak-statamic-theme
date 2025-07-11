@@ -1,0 +1,48 @@
+title: 'Career Opporunities Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: description
+    field:
+      type: textarea
+      display: Description
+  -
+    handle: opporunities
+    field:
+      type: grid
+      display: Opporunities
+      fields:
+        -
+          handle: opporunity_title
+          field:
+            type: text
+            display: 'Opporunity Title'
+        -
+          handle: vacancy_city
+          field:
+            type: text
+            display: 'Vacancy City'
+        -
+          handle: time
+          field:
+            type: text
+            display: Time
+        -
+          handle: vacancy_count
+          field:
+            type: text
+            display: 'Vacancy Count'
+        -
+          handle: vacancy_description
+          field:
+            type: textarea
+            display: 'Vacancy Description'
+        -
+          handle: apply_button_text
+          field:
+            type: text
+            display: 'Apply Button Text'

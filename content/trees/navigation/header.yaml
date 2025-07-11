@@ -1,0 +1,138 @@
+tree:
+  -
+    id: 606a1efa-c4af-4bb2-9961-29ae3f2d047a
+    title: Home
+    url: 'javascript:;'
+    children:
+      -
+        id: 6b11d21a-3b34-41ee-a24e-66f326e6f231
+        title: 'Home One'
+        url: /
+      -
+        id: 73f7a508-14d8-4779-a943-30536dd71c6f
+        title: 'Home Two'
+        url: /home-two
+      -
+        id: bc0c17c3-9e26-4f19-adfe-c95419777fea
+        title: 'Home Three'
+        url: /home-three
+  -
+    id: 37f7c3a9-72a1-4d6c-9770-6fc37eceeaa1
+    title: 'Our Services'
+    url: 'javascript:;'
+    children:
+      -
+        id: e92b7e3b-859e-4e52-ab5c-70f3f2d3e9a4
+        title: 'Services V1'
+        url: /service
+      -
+        id: 7e948bf8-1ff1-4f97-9134-4810e50a50e9
+        title: 'Services V2'
+        url: /service-two
+      -
+        id: 3f904194-14e4-44c2-8ffb-12895faf5777
+        title: 'Services Detail V1'
+        url: '/service-detail?slug=cloud-services'
+      -
+        id: d32c8596-fa8d-41de-90fc-ff5209b4b316
+        title: 'Services Detail V2'
+        url: '/service-detail-two?slug=cloud-services'
+      -
+        id: 483deaaa-448b-4e20-9dcf-a9a97da7b6a7
+        title: 'Services Detail V3'
+        url: '/service-detail-three?slug=cloud-services'
+      -
+        id: e9c303f8-02e6-4c01-bfdb-a466a34b82a2
+        title: 'Services Detail V4'
+        url: '/service-detail-four?slug=cloud-services'
+  -
+    id: c3031896-0d1d-4a68-9533-34cd531e5bd6
+    title: Portfolio
+    url: 'javascript:;'
+    children:
+      -
+        id: f8876a52-0965-45bc-9a6e-95fcbcf98b9d
+        title: 'Portfolio Grid'
+        url: /portfolio-grid
+      -
+        id: ba18ccce-15a8-4fc0-9de4-488a8a20afaf
+        title: 'Portfolio Masonary'
+        url: /portfolio-masonary
+      -
+        id: f33a26d8-7de9-4419-b05e-cbd71d1af31f
+        title: 'Portfolio Slider'
+        url: /portfolio-slider
+      -
+        id: d4d75922-0a90-459b-af30-16085238b606
+        title: 'Portfolio Detail'
+        url: '/portfolio-detail?slug=creative-design'
+  -
+    id: b37b72a5-ac74-4d42-899b-f7613795d58c
+    title: Blog
+    url: 'javascript:;'
+    children:
+      -
+        id: 779c38ef-e5a9-4c7c-8b0d-7cce0390474c
+        title: 'Blog Grid'
+        url: /blog
+      -
+        id: 1e1ab37f-dcb3-4097-a1f8-2ac2df8f811b
+        title: 'Blog List'
+        url: /blog-list
+      -
+        id: a865fe90-f387-4e37-9251-53cbc1dcbc73
+        title: 'Blog Classic'
+        url: /blog-classic
+      -
+        id: 2ff17a22-7f94-4ceb-94f6-3fa05e42fea6
+        title: 'Blog Detail V1'
+        url: '/blog-detail?slug=empowering-your-workflow-with-smart-solutions'
+      -
+        id: 076fe931-b58e-43c1-8257-68bb9c1e2e8c
+        title: 'Blog Detail V2'
+        url: '/blog-detail-two?slug=empowering-your-workflow-with-smart-solutions'
+      -
+        id: 13736501-9903-4fc2-9293-d2e6a4115992
+        title: 'Blog Detail V3'
+        url: '/blog-detail-three?slug=empowering-your-workflow-with-smart-solutions'
+  -
+    id: c178a84f-28d1-416d-9041-6cbad87f2356
+    title: Contact
+    url: /contact
+  -
+    id: 85b81841-ad5a-4d31-9a55-fdf25ddd613d
+    title: Pages
+    url: 'javascript:;'
+    children:
+      -
+        id: 80621342-5d09-443b-b861-fea05740cc98
+        title: About
+        url: /about
+      -
+        id: ed641c6a-ba94-4c0c-8853-6b729cb7bd38
+        title: Team
+        url: /team
+      -
+        id: f7824246-c67e-4192-a17e-2abe59181b04
+        title: 'Team detail'
+        url: '/team-detail?slug=alaiya-benjamin'
+      -
+        id: 6c589485-8633-4073-8bc1-043c48e1df93
+        title: Testimonial
+        url: /testimonial
+      -
+        id: 16e964f3-db38-40b6-bde2-4b60b4cd1b1f
+        title: '404'
+        url: /404
+      -
+        id: 8b469500-9e01-47f7-9c9c-e10102b62307
+        title: FAQ
+        url: /faq
+      -
+        id: 4834247e-6738-4f67-8d3f-4be2447056da
+        title: Career
+        url: /career
+  -
+    id: 591e37fa-3a83-47a9-9643-8c35e40b2ba8
+    title: 'Connect Now'
+    url: /contact

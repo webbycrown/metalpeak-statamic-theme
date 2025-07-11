@@ -1,0 +1,82 @@
+title: 'Finibus Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: button_text
+    field:
+      type: text
+      display: 'Button Text'
+  -
+    handle: button_url
+    field:
+      type: text
+      display: 'Button Url'
+  -
+    handle: video_url
+    field:
+      type: text
+      display: 'Video URL'
+  -
+    handle: video_play_button_image
+    field:
+      max_files: 1
+      min_files: 1
+      container: assets
+      type: assets
+      display: 'Video Play Button Image'
+  -
+    handle: update_text
+    field:
+      type: text
+      display: 'Update Text'
+  -
+    handle: phone_number
+    field:
+      type: text
+      display: 'Phone Number'
+  -
+    handle: background_image
+    field:
+      max_files: 1
+      min_files: 1
+      container: assets
+      type: assets
+      display: 'Background Image'
+  -
+    handle: section_type
+    field:
+      options:
+        -
+          key: without-mystone
+          value: 'Without Mystone'
+        -
+          key: with-mystone
+          value: 'With Mystone'
+      default: without-mystone
+      type: select
+      display: 'Section Type'
+  -
+    handle: finibus_nub
+    field:
+      type: grid
+      display: 'Finibus Nub'
+      fields:
+        -
+          handle: number
+          field:
+            type: text
+            display: Number
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: description
+          field:
+            type: textarea
+            display: Description

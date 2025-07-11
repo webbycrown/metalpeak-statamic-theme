@@ -1,0 +1,81 @@
+<div class="blog-classic-right" data-aos="fade-down">
+    <!-- search-box -->
+    <div class="search-here">
+        <h4>Search here...</h4>
+        <form class="classic-search detail-search-box">
+            <input type="text" placeholder="Search..." id="blog-search-input" name="s" >
+            <button class="search-btn" type="submit">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                    d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+                    stroke="#01452C" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                    <path d="M17.5 17.5L13.875 13.875" stroke="#01452C" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </form>
+    </div>
+    <!-- recent-blog -->
+    <div class="Recent-blogs">
+        <h4>Recent blogs</h4>
+        {{ collection:blogs as="recent_blogs" sort="updated_at:desc" limit="3" }}
+        {{ recent_blogs }}
+        <div class="recent-blog-content">
+            <div class="recent-image mw-img-cover">
+                {{ thumb_image }}
+                <img src="{{ url }}" alt="" class="img">
+                {{ /thumb_image }}
+            </div>
+            <div class="recent-blog-info">
+                <h6>{{ title }}</h6>
+            </div>
+        </div>
+        {{ /recent_blogs }}
+        {{ /collection:blogs }}
+    </div>
+
+    <!-- categories -->
+    <div class="categories">
+        <h4>Categories</h4>
+        <div class="categories-select-dropdown">
+            <button href="#" role="button" data-value="" class="select-dropdown-button"><span>Select Categories...</span><i class="fa-solid fa-angle-down"></i>
+            </button>
+            <ul class="select-dropdown-list">
+                {{ taxonomy:blog_categories }}
+                <li data-value="{{ slug }}" class="select-dropdown-list-item"><a href="/blog/category/{{slug}}" >{{ title }}</a></li>
+                {{ /taxonomy:blog_categories }}
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- instagram-post -->
+    <div class="instagram-post">
+        {{ instagram_post }}
+        <h4>{{ section_title }}</h4>
+        <div class="instagram-grid">
+            {{ images }}
+            <a href="{{ if instagram_url }}{{ instagram_url }} {{ /if }}" class="insta-image mw-img-cover">
+                <img src="{{url}}" alt="" class="img">
+            </a>
+            {{ /images }}
+        </div>
+        {{ /instagram_post }}
+    </div>
+    <!-- popular-tags -->
+    <div class="popular-tags">
+        <h4>Popular Tags</h4>
+        <div class="popular-tag-wrapper">
+            <ul>
+                {{ taxonomy:blog_tags }}
+                {{ if segment_1 == "blog-classic"  }}
+                <li><a href="/blog-classic?tag={{slug}}">{{ title }}</a></li>
+                {{ else }}
+                <li><a href="/blog?tag={{slug}}">{{ title }}</a></li>
+                {{ /if }}
+                {{ /taxonomy:blog_tags }}
+            </ul>
+        </div>
+    </div>
+</div>

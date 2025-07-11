@@ -1,0 +1,40 @@
+title: 'Blog Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: section_description
+    field:
+      type: textarea
+      display: 'Section Description'
+  -
+    handle: collections
+    field:
+      mode: select
+      type: collections
+      display: Collections
+      max_items: 1
+  -
+    handle: paginate
+    field:
+      type: text
+      display: Paginate
+  -
+    handle: limit
+    field:
+      type: integer
+      display: Limit
+  -
+    handle: read_more_button_text
+    field:
+      default: 'Read More'
+      type: text
+      display: 'Read More Button Text'
+  -
+    handle: read_more_button_url
+    field:
+      type: text
+      display: 'Read More Button url'
