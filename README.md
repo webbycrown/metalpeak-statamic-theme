@@ -2,6 +2,11 @@
 
 At Metalpeak Statamic, we make it easy to build stunning websites with zero hassle. Our theme comes packed with customizable sections for blogs, services, portfolios, testimonials, and more—so you can focus on content, not complexity.
 
+Metalpeak is a corporate and industrial starter kit for service firms that need portfolio, blog, and career pages.
+
+**Live demo:** https://metalpeak-statamic.webbydemo.in/  
+Control Panel: `/cp` — `admin@example.com` / `password`
+
 ## Pages of Metalpeak
 
 - Home Page (3 variants)
@@ -19,6 +24,15 @@ At Metalpeak Statamic, we make it easy to build stunning websites with zero hass
 - FAQ Page
 - Career Page
 - 404 Page
+
+## Collections
+
+- **Pages**: Site structure and layout variants.
+- **Blogs**: Articles with classic, list, and three detail layouts.
+- **Portfolio**: Grid, masonry, slider, and detail.
+- **Services**: Two listing layouts and four detail layouts.
+- **Teams**: Listing and profile.
+- **Testimonials** and **FAQ**.
 
 ## Features of Metalpeak
 
