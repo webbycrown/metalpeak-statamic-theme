@@ -4,9 +4,6 @@ At Metalpeak Statamic, we make it easy to build stunning websites with zero hass
 
 Metalpeak is a corporate and industrial starter kit for service firms that need portfolio, blog, and career pages.
 
-**Live demo:** https://metalpeak-statamic.webbydemo.in/  
-Control Panel: `/cp` — `admin@example.com` / `password`
-
 ## Pages of Metalpeak
 
 - Home Page (3 variants)
@@ -89,3 +86,5 @@ statamic new my-site webbycrown/metalpeak-statamic-theme
 <div align="center">
   <strong>Made with ❤️ by <a href="https://www.webbycrown.com/custom-statamic-development-services-company/">WebbyCrown Solutions</a></strong>
 </div>
+
+See [THIRD_PARTY.md](THIRD_PARTY.md) for bundled front-end libraries, fonts, and sample imagery licences.
