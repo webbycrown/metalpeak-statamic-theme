@@ -77,3 +77,11 @@ tabs:
         fields:
           -
             import: seo_section
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Search and social
+        fields:
+          -
+            import: seo

@@ -3,7 +3,7 @@ id: a2b56a48-8011-499b-b06b-7d46fe6b5532
 blueprint: page
 title: About
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: about
+template: page
 show_hero_section: true
 section_title: 'About us'
 seo_title: About

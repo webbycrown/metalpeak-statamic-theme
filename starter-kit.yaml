@@ -1,5 +1,7 @@
 name: metalpeak
-title: MetalPeak Theme
+title: Metalpeak Theme
+user: webbycrown
+repo: webbycrown/metalpeak-statamic-theme
 description: A custom Statamic Starter Kit for MetalPeak.
 version: 1.0
 export_paths:

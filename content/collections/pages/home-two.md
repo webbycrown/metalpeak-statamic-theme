@@ -9,7 +9,7 @@ seo_description: 'Home Two'
 seo_image: 'images/MetalPeak OG Image.jpg'
 updated_by: 46885cbe-f8ff-4b8b-917c-65893c862938
 updated_at: 1752036752
-template: index-two
+template: page
 page_builder:
   -
     id: mcu7r6x7

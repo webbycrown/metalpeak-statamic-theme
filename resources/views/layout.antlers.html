@@ -4,6 +4,20 @@
 
 
 <body class="js">
+    <div class="preloader fixed inset-0 z-[99999] flex items-center justify-center bg-white transition-opacity duration-300" aria-hidden="true" id="kit-preloader">
+        {{ setting }}
+        {{ logo }}<img src="{{ url }}" alt="{{ site:name }}" class="max-h-16 w-auto" decoding="async" />{{ /logo }}
+        {{ /setting }}
+    </div>
+    <script>
+    window.addEventListener('load', function () {
+      var el = document.getElementById('kit-preloader') || document.querySelector('.preloader');
+      if (!el) return;
+      el.style.opacity = '0';
+      setTimeout(function () { el.style.display = 'none'; }, 300);
+    });
+    </script>
+
 
     <!-- start-loader -->
     <div class="loader background-secondary" style="display: block;">

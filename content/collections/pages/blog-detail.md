@@ -3,7 +3,7 @@ id: 16eb4fa9-c49a-4686-aedd-7bb4ffd3326c
 blueprint: page
 title: 'Blog Detail'
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: blog/show
+template: page
 show_hero_section: false
 seo_title: 'Blog Detail'
 seo_description: 'Blog Detail'

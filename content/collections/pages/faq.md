@@ -3,7 +3,7 @@ id: 9840fc76-3dff-4948-9679-8d396c894c57
 blueprint: page
 title: FAQ
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: faq
+template: page
 show_hero_section: true
 section_title: FAQ
 seo_title: FAQ

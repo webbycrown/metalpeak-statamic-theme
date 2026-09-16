@@ -3,7 +3,7 @@ id: 143870ed-51b1-4c2d-bfed-6d6895a3b0b2
 blueprint: page
 title: 'Portfolio Grid'
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: portfolio-grid
+template: page
 show_hero_section: true
 section_title: 'Portfolio Grid'
 seo_title: 'Portfolio Grid'

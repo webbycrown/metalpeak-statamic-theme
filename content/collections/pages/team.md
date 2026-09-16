@@ -3,7 +3,7 @@ id: 2b1a6a81-0639-4e2b-811d-635b26b11b72
 blueprint: page
 title: Team
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: team/index
+template: page
 show_hero_section: true
 section_title: Team
 seo_title: Team

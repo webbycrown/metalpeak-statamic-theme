@@ -3,7 +3,7 @@ id: 155f6477-26a4-4ff3-9c6f-c50df9090392
 blueprint: page
 title: 'Services V2'
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: services-page-two
+template: page
 show_hero_section: true
 section_title: Services
 page_builder:

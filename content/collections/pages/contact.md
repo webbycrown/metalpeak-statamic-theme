@@ -3,7 +3,7 @@ id: 92b5cad1-24c8-4365-8a38-44fc47e501c6
 blueprint: page
 title: Contact
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: contact-us
+template: page
 show_hero_section: true
 section_title: 'Contact us'
 seo_title: Contact

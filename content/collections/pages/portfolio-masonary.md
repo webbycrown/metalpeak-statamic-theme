@@ -3,7 +3,7 @@ id: a34bf000-a05e-413e-a716-d59d48cdd3a5
 blueprint: page
 title: 'Portfolio Masonary'
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: portfolio-masonary
+template: page
 show_hero_section: true
 section_title: 'Portfolio Masonary'
 page_builder:

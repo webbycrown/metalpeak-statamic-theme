@@ -3,7 +3,7 @@ id: 56a72c8f-a19c-4d78-99b8-04436e067e39
 blueprint: page
 title: 'Home Three'
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: index-three
+template: page
 show_hero_section: false
 seo_title: 'Home Three'
 seo_description: 'Home Three'

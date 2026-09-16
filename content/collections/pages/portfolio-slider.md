@@ -3,7 +3,7 @@ id: c818f94c-ad7f-4ef4-a7aa-9a52d5472799
 blueprint: page
 title: 'Portfolio Slider'
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: portfolio-slider
+template: page
 show_hero_section: true
 section_title: 'Portfolio Slider'
 page_builder:

@@ -2,7 +2,7 @@
 id: home
 blueprint: pages
 title: Metalpeak
-template: index
+template: page
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
 updated_by: 46885cbe-f8ff-4b8b-917c-65893c862938
 updated_at: 1752036624

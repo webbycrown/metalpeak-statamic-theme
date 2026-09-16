@@ -3,7 +3,7 @@ id: f43470c6-0094-478b-98b4-1744d85e9870
 blueprint: page
 title: Career
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: career
+template: page
 show_hero_section: true
 section_title: Career
 seo_title: Career

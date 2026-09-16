@@ -3,7 +3,7 @@ id: ca335703-2561-49b6-98e2-f147542f7b2a
 blueprint: page
 title: 'Blog Classic'
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: blog-classic
+template: page
 show_hero_section: true
 section_title: 'Blog Classic'
 page_builder:

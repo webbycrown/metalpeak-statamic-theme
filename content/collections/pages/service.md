@@ -3,7 +3,7 @@ id: a24a7567-79ef-4db6-b5f5-e97348bd90f1
 blueprint: page
 title: 'Services V1'
 author: 46885cbe-f8ff-4b8b-917c-65893c862938
-template: services-page-one
+template: page
 show_hero_section: true
 section_title: Services
 seo_title: 'Services V1'
